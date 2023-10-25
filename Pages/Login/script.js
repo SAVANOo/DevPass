@@ -1,3 +1,5 @@
 const enterButton = document.getElementById("enterButton")
 
-enterButton.addEventListener("onclick", window.location.href = "../HomePage/Index.html")
+enterButton.addEventListener("click", () => {
+    window.location.href = "../HomePage/Index.html"
+})
