@@ -33,11 +33,14 @@ containers.forEach(container => {
 
 
 const conteudos = {
-     Vagas : document.querySelector("#ConteudoVagas"),
-     jsonUrlVagas : "Src/Vagas/data.json",
+    Vagas: document.querySelector("#ConteudoVagas"),
+    jsonUrlVagas: "Src/Vagas/data.json",
 
-     Comunidades : document.querySelector("#ConteudoComunidades"),
-     jsonUrlComunidades : "Src/Comunidades/data.json"
+    Comunidades: document.querySelector("#ConteudoComunidades"),
+    jsonUrlComunidades: "Src/Comunidades/data.json",
+
+    Noticias: document.querySelector("#ConteudoNoticias"),
+    jsonUrlNoticias: "Src/NoticiasDev/data.json"
 };
 
 // Função para buscar e atualizar os dados
@@ -62,6 +65,7 @@ function fetchData(container, jsonUrl) {
                 link.classList.add("VagaTitle");
                 link.textContent = item.titulo;
                 link.setAttribute("target", "_blank");
+                
 
 
                 itemDiv.appendChild(img);
@@ -78,3 +82,4 @@ function fetchData(container, jsonUrl) {
 // Chame a função para buscar e atualizar os dados
 fetchData(conteudos.Vagas, conteudos.jsonUrlVagas);
 fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades);
+fetchData(conteudos.Noticias, conteudos.jsonUrlNoticias);
