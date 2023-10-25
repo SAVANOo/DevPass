@@ -20,6 +20,13 @@
     --gray-hover-dark: #8a8a8a;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Media query para celulares */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--white);
@@ -32,8 +39,91 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
-    overflow-y: hidden;
 }
+
+header :hover {
+    cursor: pointer;
+}
+
+
+.WelcomeText {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    padding: 22px 14px;
+}
+
+.Container {
+    width: 100vw;
+    height: auto;
+}
+
+.ContainerItems {
+    margin: 13px 0px 13px 14px;
+    
+    justify-content: left;
+    text-align: left;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 0.20rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    list-style: none;
+}
+
+.ContainerItems a{
+    overflow: hidden;
+}
+
+.TopContainer {
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.TopContainer h1,
+.TopContainer a {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.TopContainer a {
+    text-decoration-line: none;
+}
+
+.Items{
+    display: flex;
+    flex-direction: column;
+    margin-right: 14px;
+    width: 101px;
+    height: 157px;
+}
+
+.VagaTitle {
+    font-size: 11px;
+    overflow: hidden;
+    font-weight: 500;
+    text-decoration-line: none;
+    color: var(--black);
+}
+
+.VagaTitle:hover {
+    text-decoration-line: underline;
+}
+
+.Container img {
+    width: 101px;
+    height: 101px;
+}
+
 
 
 /* Media query para tablets */
