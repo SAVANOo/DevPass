@@ -46,7 +46,7 @@ header #logo {
     max-width: 100vw;
 }
 
-.LoginForm form {
+.RegisterForm form {
     background-color: var(--blue-main);
     width: 320px;
     height: 500px;
@@ -55,22 +55,29 @@ header #logo {
     box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
 }
 
-.LoginForm .LoginTitle {
+.RegisterForm .RegisterTitle {
     color: var(--white);
     text-align: center;
     font-size: 40px;
     margin: 0 auto 33px;
 }
 
-.LoginForm label {
+.RegisterForm label {
     color: var(--white);
     font-size: 22px;
     font-weight: 500;
     line-height: normal;
 }
 
-.LoginForm .UserContainer,
-.PasswordContainer {
+.RegisterForm .RegistrationInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.UserContainer,
+.PasswordContainer,
+.EmailContainer {
     margin: 0 auto;
     width: 280px;
     display: flex;
@@ -78,11 +85,8 @@ header #logo {
     gap: 16px;
 }
 
-.PasswordContainer {
-    margin-top: 25px;
-}
 
-.LoginForm input[type="text"] {
+.RegisterForm input {
     height: 36px;
     padding: 10px;
     border-radius: 6px;
@@ -93,12 +97,15 @@ header #logo {
     font-size: 15px;
 }
 
-.LoginForm .ForgotPasswordContainer {
+.RegisterForm .LoginPageLinkContainer {
+    color: var(--white);
     margin-top: 18px;
     text-align: end;
+    font-size: 15px;
+    font-weight: 300;
 }
 
-.LoginForm .ForgotPasswordContainer a {
+.RegisterForm .LoginPageLinkContainer a {
     color: var(--white);
     font-size: 15px;
     font-weight: 300;
@@ -109,7 +116,7 @@ header #logo {
     display: block;
     width: 161px;
     height: 48px;
-    margin: 38px auto;
+    margin: 20px auto;
     border-radius: 6px;
     background: var(--orange-main);
     border: 0;
@@ -121,22 +128,10 @@ header #logo {
     font-weight: 700;
 }
 
-.ContainerLinkToRegistrationPage {
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.ContainerLinkToRegistrationPage a {
-    color: var(--white);
-    font-weight: 300;
-    text-decoration-line: underline;
-}
 
 /* Media query para tablets */
 @media screen and (min-width: 768px) {
-    
+
     body {
         display: flex;
         flex-direction: row;
@@ -162,41 +157,38 @@ header #logo {
         width: 600px;
     }
 
-    .LoginForm form{
+    .RegisterForm form {
         width: 380px;
         height: 550px;
     }
-    
-    .LoginForm .LoginTitle {
+
+    .RegisterForm .RegisterTitle {
         font-size: 42px;
         margin: 0 auto 40px;
     }
 
-    .LoginForm label {
+    .RegisterForm label {
         color: var(--white);
         font-size: 25px;
         font-weight: 500;
         line-height: normal;
     }
-    
-    .LoginForm .UserContainer,
+
+    .EmailContainer,
+    .UserContainer,
     .PasswordContainer {
         margin: 0 auto;
         width: 100%;
         gap: 18px;
     }
-    
-    .PasswordContainer {
-        margin-top: 30px;
-    }
-    
-    .LoginForm input[type="text"] {
+
+    .RegisterForm input {
         height: 40px;
     }
-    
+
     .EnterButton {
-        margin: 45px auto;
+        margin: 20px auto;
     }
-    
+
 
 }
