@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/10c2a015e5.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../Src/favicon.svg">
+
+    <title>&lt;DevPass&gt;</title>
+</head>
+
+<body>
+    <header class="mobile">
+        <img src="../Src/HeaderIcon/LogoDevPass.png" alt="Logo DevPass" class="LogoDevPass">
+        <img src="../Src/HeaderIcon/message-solid 1.svg" alt="Message Icon" class="MessageIcon">
+    </header>
+
+    <header class="desktop">
+        <div class="circle">
+            <img src="../Src/HeaderIcon/Ellipse 1.svg" alt="">
+            <img src="../Src/HeaderIcon/Ellipse 2.svg" alt="">
+            <img src="../Src/HeaderIcon/Ellipse 3.svg" alt="">
+        </div>
+
+        <img src="../Src/HeaderIcon/LogoDevPassDesktop.svg" class="LogoDevPass" alt="Logo DevPass">
+
+        <div class="navbar">
+            <div class="SearchBar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Vagas, comunidades, serviços e mais...">
+            </div>
+            <div class="Navigation">
+                <a href="../NotificationPage/Index.html"><i class="fa-solid fa-bell"></i></a>
+                <a href="../ProfilePage/Index.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="SearchContainer">
+        <h1 class="SearchText mobile">Pesquisar</h1>
+        <div class="SearchBar mobile">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Vagas, comunidades, serviços e mais...">
+        </div>
+        <h1 class="SearchText">Resultados:</h1>
+
+        <ul id="SearchResultados">
+            <li class="Items">
+                <h3 class="TypeSearch">Comunidades</h3>
+                <div class="SearchContent">
+                    <img src="Src/Comunidades/Imagens/img1.jpg" alt="Xeloguismo image" class="Image">
+                    <div class="SearchInformation">
+                        <a class="VagaTitle" href="https://www.linkedin.com/jobs/view/3743247562">Xeloguismo</a>
+                        <h3 class="Subtitle">A melhor comunidade ja existente, ninguem escapa do bullying</h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <footer class="mobile">
+        <a href="../HomePage/Index.html" ><i class="fa-solid fa-house"></i></a>
+        <a href="../SearchPage/Index.html" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="../NotificationPage/Index.html"><i class="fa-solid fa-bell"></i></a>
+        <a href="../ProfilePage/Index.html"><i class="fa-solid fa-user"></i></a>
+    </footer>
+</body>
+
+</html>
