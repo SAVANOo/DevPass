@@ -134,7 +134,7 @@ header #logo {
 
     body {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-evenly;
     }
@@ -148,7 +148,7 @@ header #logo {
 @media screen and (min-width: 1024px) {
     body {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-evenly;
     }
