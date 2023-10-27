@@ -338,4 +338,7 @@ footer .fa-solid {
     .mobile {
         display: none;
     }
+    .NoFoundSearch{
+        display: none;
+    }
 }
