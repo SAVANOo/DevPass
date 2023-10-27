@@ -65,7 +65,7 @@ function fetchData(container, jsonUrl) {
                 link.classList.add("VagaTitle");
                 link.textContent = item.titulo;
                 link.setAttribute("target", "_blank");
-                
+
 
 
                 itemDiv.appendChild(img);
@@ -84,11 +84,19 @@ fetchData(conteudos.Vagas, conteudos.jsonUrlVagas);
 fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades);
 fetchData(conteudos.Noticias, conteudos.jsonUrlNoticias);
 
-const searchButton = document.getElementById("searchButton");
-const searchInput = document.getElementById("desktopSearchInput");
 
-searchButton.addEventListener("click", () => {
+function performSearch() {
     const searchTerm = searchInput.value;
     const redirectURL = '../SearchPage/Index.html' + `?search=${encodeURIComponent(searchTerm)}`;
     window.location.href = redirectURL;
+}
+
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", performSearch);
+
+const searchInput = document.getElementById("desktopSearchInput");
+searchInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        performSearch();
+    }
 });

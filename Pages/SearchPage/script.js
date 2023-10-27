@@ -103,8 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const decodedSearchTerm = decodeURIComponent(searchTerm);
 
         // Preencha o campo de pesquisa com o termo decodificado
-        const searchInput = document.getElementById("desktopSearchInput");
-        searchInput.value = decodedSearchTerm;
+        const desktopSearchInput = document.getElementById("desktopSearchInput");
+        desktopSearchInput.value = decodedSearchTerm;
+        const mobileSearchInput = document.getElementById("mobileSearchInput");
+        mobileSearchInput.value = decodedSearchTerm;
         fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, decodedSearchTerm);
     }
 });
