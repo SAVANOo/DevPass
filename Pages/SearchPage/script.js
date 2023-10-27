@@ -1,10 +1,11 @@
 const conteudos = {
     Comunidades: document.querySelector("#SearchResultados"),
-    jsonUrlComunidades: "Src/Comunidades/data.json"
+    jsonUrlComunidades: "Src/Comunidades/data.json",
+    searchInput : document.getElementById("SearchInput")
 };
 
 // Função para buscar e atualizar os dados
-function fetchData(container, jsonUrl) {
+function fetchData(container, jsonUrl,searchTerm) {
     fetch(jsonUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -13,46 +14,50 @@ function fetchData(container, jsonUrl) {
 
             // Iterar sobre os dados e criar elementos HTML
             data.forEach((item) => {
-                const ItemsDiv = document.createElement("li");
-                ItemsDiv.classList.add("Items");
+                if (item.titulo.toLowerCase().includes(searchTerm.toLowerCase())) {
 
-                const divSearchContent = document.createElement("div");
-                divSearchContent.classList.add("SearchContent")
+                    const ItemsDiv = document.createElement("li");
+                    ItemsDiv.classList.add("Items");
+                    ItemsDiv.id = item.titulo;
 
-                const divSearchInformation = document.createElement("div")
-                divSearchInformation.classList.add("SearchInformation");
+                    const divSearchContent = document.createElement("div");
+                    divSearchContent.classList.add("SearchContent")
 
-                const tipo = document.createElement("h3");
-                // tipo.textContent = item.tipo;
-                tipo.textContent = item.tipo.toUpperCase();
-                tipo.classList.add("TypeSearch");
-                
-                const img = document.createElement("img");
-                img.src = item.imagem;
-                img.alt = `${item.titulo} image`;
-                img.classList.add("Image")
+                    const divSearchInformation = document.createElement("div")
+                    divSearchInformation.classList.add("SearchInformation");
 
-                const link = document.createElement("a");
-                link.href = item.link;
-                link.classList.add("VagaTitle");
-                link.textContent = item.titulo;
-                link.setAttribute("target", "_blank");
+                    const tipo = document.createElement("h3");
+                    // tipo.textContent = item.tipo;
+                    tipo.textContent = item.tipo.toUpperCase();
+                    tipo.classList.add("TypeSearch");
 
-                const subtitle = document.createElement("h3");
-                subtitle.classList.add("Subtitle");
-                subtitle.textContent = item.subtitulo;
+                    const img = document.createElement("img");
+                    img.src = item.imagem;
+                    img.alt = `${item.titulo} image`;
+                    img.classList.add("Image")
 
-                divSearchInformation.appendChild(link)
-                divSearchInformation.appendChild(subtitle)
+                    const link = document.createElement("a");
+                    link.href = item.link;
+                    link.classList.add("VagaTitle");
+                    link.textContent = item.titulo;
+                    link.setAttribute("target", "_blank");
 
-                divSearchContent.appendChild(img)
-                divSearchContent.appendChild(divSearchInformation)
+                    const subtitle = document.createElement("h3");
+                    subtitle.classList.add("Subtitle");
+                    subtitle.textContent = item.subtitulo;
 
-                ItemsDiv.appendChild(tipo)
-                ItemsDiv.appendChild(divSearchContent)
+                    divSearchInformation.appendChild(link)
+                    divSearchInformation.appendChild(subtitle)
+
+                    divSearchContent.appendChild(img)
+                    divSearchContent.appendChild(divSearchInformation)
+
+                    ItemsDiv.appendChild(tipo)
+                    ItemsDiv.appendChild(divSearchContent)
 
 
-                container.appendChild(ItemsDiv);
+                    container.appendChild(ItemsDiv);
+                }
             });
         })
         .catch((error) => {
@@ -60,5 +65,7 @@ function fetchData(container, jsonUrl) {
         });
 }
 
-// Chame a função para buscar e atualizar os dados
-fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades);
+conteudos.searchInput.addEventListener("keyup", (event) => {
+    const searchTerm = conteudos.searchInput.value;
+    fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades, searchTerm);
+});
