@@ -85,3 +85,26 @@ function setupSearchInput() {
 // Execute a função setupSearchInput quando a página carregar e quando a janela for redimensionada
 window.addEventListener("load", setupSearchInput());
 window.addEventListener("resize", setupSearchInput);
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return "";
+    return decodeURIComponent(decodeURIComponent(results[2].replace(/\+/g, " ")));
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchTerm = getParameterByName("search");
+    if (searchTerm) {
+        // Decodifique o termo de pesquisa
+        const decodedSearchTerm = decodeURIComponent(searchTerm);
+
+        // Preencha o campo de pesquisa com o termo decodificado
+        const searchInput = document.getElementById("desktopSearchInput");
+        searchInput.value = decodedSearchTerm;
+        fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, decodedSearchTerm);
+    }
+});
