@@ -28,6 +28,7 @@
     box-sizing: border-box;
 }
 
+
 /* Media query para celulares */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -42,10 +43,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
-}
-
-header :hover {
-    cursor: pointer;
 }
 
 .desktop {
@@ -92,7 +89,8 @@ header :hover {
     padding: 16px 10px;
 }
 
-.SearchBar input {
+.desktopSearchInput,
+.mobileSearchInput {
     width: 100%;
     text-decoration: none;
     margin-left: 10px;
@@ -121,7 +119,7 @@ header :hover {
 }
 
 
-.VagaTitle {
+.ItemTitle {
     font-size: 18px;
     overflow: hidden;
     font-weight: 600;
@@ -129,7 +127,7 @@ header :hover {
     color: var(--black);
 }
 
-.VagaTitle:hover {
+.ItemTitle:hover {
     text-decoration-line: underline;
 }
 
@@ -209,7 +207,7 @@ header :hover {
     }
 }
 
-.NoFoundSearch{
+.NoFoundSearch {
     display: none;
 }
 
@@ -274,7 +272,7 @@ footer .fa-solid {
         width: auto;
     }
 
-    header .navbar {
+    .HeaderNavBar {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -286,9 +284,13 @@ footer .fa-solid {
         gap: 20px;
     }
 
-    .Navigation a {
+    .NavigationIcon {
         color: #000;
         font-size: 25px;
+    }
+
+    .SearchBarIcon:hover {
+        cursor: pointer;
     }
 
     .SearchBar {
@@ -310,35 +312,82 @@ footer .fa-solid {
         outline: none;
         background: transparent;
         cursor: initial;
-
     }
 
     .SearchText {
         font-size: 35px;
     }
 
-
-    .TopContainer h1 {
-        font-size: 35px;
+    .SearchResultados {
+        padding: 0 14px;
     }
 
-    .TopContainer a {
+    .Items {
+        border: none;
+        margin-bottom: 16px;
+    }
+
+    .TypeSearch {
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    .Image {
+        width: 250px;
+        height: 150px;
+    }
+
+    .ItemTitle {
+        font-size: 30px;
+    }
+
+    .Subtitle {
         font-size: 18px;
     }
 
-    .Container img {
-        width: 309px;
-        height: 153px;
+    .SearchInformation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
     }
 
-    .VagaTitle {
-        font-size: 15px;
+    .ButtonContainer {
+        width: 105px;
+        height: 44px;
+        background-color: var(--orange-main);
+        align-items: center;
+        border-radius: 6px;
+        text-decoration: none;
+        padding: 3px 12px;
+        justify-content: center;
+
+    }
+
+    .ButtonContainer:hover {
+        cursor: pointer;
+        background-color: var(--orange-hover-dark);
+    }
+
+    .ButtonResult {
+        color: var(--white);
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+        align-items: center;
+    }
+
+    .ButtonResult:hover {
+        cursor: pointer;
     }
 
     .mobile {
         display: none;
     }
-    .NoFoundSearch{
+
+    .NoFoundSearch {
         display: none;
     }
 }

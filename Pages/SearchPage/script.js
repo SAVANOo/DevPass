@@ -1,6 +1,6 @@
 const conteudos = {
     Resultados: document.querySelector("#SearchResultados"),
-    jsonUrlResultados: "Src/Comunidades/data.json",
+    jsonUrlResultados: "../Src/Data/data.json",
     searchInput: document.getElementById("SearchInput")
 };
 
@@ -48,7 +48,7 @@ function fetchData(container, jsonUrl, searchTerm) {
 
                     const link = document.createElement("a");
                     link.href = item.link;
-                    link.classList.add("VagaTitle");
+                    link.classList.add("ItemTitle");
                     link.textContent = item.titulo;
                     link.setAttribute("target", "_blank");
 
@@ -56,8 +56,19 @@ function fetchData(container, jsonUrl, searchTerm) {
                     subtitle.classList.add("Subtitle");
                     subtitle.textContent = item.subtitulo;
 
+                    const buttonLink = document.createElement("a");
+                    const button = document.createElement("button");
+                    button.textContent = "Ler mais";
+                    button.classList.add("ButtonResult")
+                    buttonLink.classList.add("ButtonContainer")
+                    buttonLink.classList.add("desktop")
+
+                    buttonLink.href = item.link;
+                    buttonLink.appendChild(button);
+
                     divSearchInformation.appendChild(link)
                     divSearchInformation.appendChild(subtitle)
+                    divSearchInformation.appendChild(buttonLink)
 
                     divSearchContent.appendChild(img)
                     divSearchContent.appendChild(divSearchInformation)
