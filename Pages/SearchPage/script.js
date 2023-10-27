@@ -1,11 +1,11 @@
 const conteudos = {
-    Comunidades: document.querySelector("#SearchResultados"),
-    jsonUrlComunidades: "Src/Comunidades/data.json",
-    searchInput : document.getElementById("SearchInput")
+    Resultados: document.querySelector("#SearchResultados"),
+    jsonUrlResultados: "Src/Comunidades/data.json",
+    searchInput: document.getElementById("SearchInput")
 };
 
 // Função para buscar e atualizar os dados
-function fetchData(container, jsonUrl,searchTerm) {
+function fetchData(container, jsonUrl, searchTerm) {
     fetch(jsonUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -65,7 +65,23 @@ function fetchData(container, jsonUrl,searchTerm) {
         });
 }
 
-conteudos.searchInput.addEventListener("keyup", (event) => {
-    const searchTerm = conteudos.searchInput.value;
-    fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades, searchTerm);
-});
+function setupSearchInput() {
+    const desktopSearchInput = document.getElementById("desktopSearchInput");
+    const mobileSearchInput = document.getElementById("mobileSearchInput");
+
+    if (window.innerWidth < 768) { // Exemplo: 768px para alternar entre desktop e mobile
+        mobileSearchInput.addEventListener("keyup", function (event) {
+            const searchTerm = mobileSearchInput.value;
+            fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, searchTerm);
+        });
+    } else {
+        desktopSearchInput.addEventListener("keyup", function (event) {
+            const searchTerm = desktopSearchInput.value;
+            fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, searchTerm);
+        });
+    }
+}
+
+// Execute a função setupSearchInput quando a página carregar e quando a janela for redimensionada
+window.addEventListener("load", setupSearchInput());
+window.addEventListener("resize", setupSearchInput);
