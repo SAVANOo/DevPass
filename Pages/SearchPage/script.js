@@ -19,7 +19,7 @@ function fetchData(container, jsonUrl, searchTerm) {
         .then((data) => {
             // Limpar o conteúdo atual da div
             container.innerHTML = "";
-
+            NoFoundSearchText.style.display = "none";
             ResultText.style.display = "flex";
 
             // Iterar sobre os dados e criar elementos HTML
@@ -68,12 +68,18 @@ function fetchData(container, jsonUrl, searchTerm) {
                     container.appendChild(ItemsDiv);
                 }
 
-                if (!container.getElementsByTagName('li').length) {
+
+                const TamanhoLista = container.getElementsByTagName('li').length
+                if (!TamanhoLista) {
                     ResultText.innerText = "Nada encontrado..."
                     NoFoundSearch.style.display = "flex";
-                    NoFoundSearchText.style.display = "none";
                 } else {
-                    ResultText.innerText = "Resultado:"
+                    if (container.getElementsByTagName('li').length === 1) {
+                        ResultText.innerText = "Resultado (1) :"
+                    } else {
+                        ResultText.innerText = `Resultados (${TamanhoLista}) :`
+                    }
+                    NoFoundSearch.style.display = "none";
                 }
             });
         })
