@@ -4,6 +4,14 @@ const conteudos = {
     searchInput: document.getElementById("SearchInput")
 };
 
+const ResultText = document.getElementById("ResultText");
+ResultText.style.display = "none";
+
+const NoFoundSearch = document.getElementById("NoFoundSearch");
+NoFoundSearch.style.display = "flex";
+
+const NoFoundSearchText = document.getElementById("NoFoundSearchText");
+
 // Função para buscar e atualizar os dados
 function fetchData(container, jsonUrl, searchTerm) {
     fetch(jsonUrl)
@@ -11,6 +19,8 @@ function fetchData(container, jsonUrl, searchTerm) {
         .then((data) => {
             // Limpar o conteúdo atual da div
             container.innerHTML = "";
+
+            ResultText.style.display = "flex";
 
             // Iterar sobre os dados e criar elementos HTML
             data.forEach((item) => {
@@ -55,8 +65,15 @@ function fetchData(container, jsonUrl, searchTerm) {
                     ItemsDiv.appendChild(tipo)
                     ItemsDiv.appendChild(divSearchContent)
 
-
                     container.appendChild(ItemsDiv);
+                }
+
+                if (!container.getElementsByTagName('li').length) {
+                    ResultText.innerText = "Nada encontrado..."
+                    NoFoundSearch.style.display = "flex";
+                    NoFoundSearchText.style.display = "none";
+                } else {
+                    ResultText.innerText = "Resultado:"
                 }
             });
         })
@@ -68,16 +85,31 @@ function fetchData(container, jsonUrl, searchTerm) {
 function setupSearchInput() {
     const desktopSearchInput = document.getElementById("desktopSearchInput");
     const mobileSearchInput = document.getElementById("mobileSearchInput");
-
     if (window.innerWidth < 768) { // Exemplo: 768px para alternar entre desktop e mobile
         mobileSearchInput.addEventListener("keyup", function (event) {
             const searchTerm = mobileSearchInput.value;
-            fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, searchTerm);
+            if (searchTerm) {
+                NoFoundSearch.style.display = "none"
+                fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, searchTerm);
+            } else {
+                conteudos.Resultados.innerHTML = "";
+                ResultText.style.display = "none";
+                NoFoundSearch.style.display = "flex";
+                NoFoundSearchText.style.display = "flex"
+            }
         });
     } else {
         desktopSearchInput.addEventListener("keyup", function (event) {
             const searchTerm = desktopSearchInput.value;
-            fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, searchTerm);
+            if (searchTerm) {
+                NoFoundSearch.style.display = "none"
+                fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, searchTerm);
+            } else {
+                conteudos.Resultados.innerHTML = "";
+                ResultText.style.display = "none";
+                NoFoundSearch.style.display = "flex";
+                NoFoundSearchText.style.display = "flex"
+            }
         });
     }
 }
@@ -101,12 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (searchTerm) {
         // Decodifique o termo de pesquisa
         const decodedSearchTerm = decodeURIComponent(searchTerm);
-
         // Preencha o campo de pesquisa com o termo decodificado
         const desktopSearchInput = document.getElementById("desktopSearchInput");
         desktopSearchInput.value = decodedSearchTerm;
+
         const mobileSearchInput = document.getElementById("mobileSearchInput");
         mobileSearchInput.value = decodedSearchTerm;
+
         fetchData(conteudos.Resultados, conteudos.jsonUrlResultados, decodedSearchTerm);
     }
 });

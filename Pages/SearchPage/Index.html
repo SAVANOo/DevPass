@@ -29,7 +29,7 @@
         <a href="../HomePage/Index.html">
             <img src="../Src/HeaderIcon/LogoDevPassDesktop.svg" class="LogoDevPass" alt="Logo DevPass">
         </a>
-        
+
         <div class="navbar">
             <div class="SearchBar">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -48,25 +48,16 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input id="mobileSearchInput" type="text" placeholder="Vagas, comunidades, serviços e mais...">
         </div>
-        <h1 class="SearchText">Resultados:</h1>
-
-        <ul id="SearchResultados">
-            <li class="Items">
-                <h3 class="TypeSearch">Comunidades</h3>
-                <div class="SearchContent">
-                    <img src="Src/Comunidades/Imagens/img1.jpg" alt="Xeloguismo image" class="Image">
-                    <div class="SearchInformation">
-                        <a class="VagaTitle" href="https://www.linkedin.com/jobs/view/3743247562">Xeloguismo</a>
-                        <h3 class="Subtitle">A melhor comunidade ja existente, ninguem escapa do bullying</h3>
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <h1 id="ResultText" class="SearchText">Resultados:</h1>
+        <ul id="SearchResultados"></ul>
     </div>
 
-
+    <div class="NoFoundSearch" id="NoFoundSearch">
+        <img id="NoFoundSearchImage" class="NoFoundSearchImage" src="Src/noun-searching-error-2389861.png" alt="teste">
+        <h4 id="NoFoundSearchText" class="NoFoundSearchText">Nada pesquisado ainda<span class="dots">.</span><span class="dots">.</span><span class="dots">.</span></h4>
+    </div>
     <footer class="mobile">
-        <a href="../HomePage/Index.html" ><i class="fa-solid fa-house"></i></a>
+        <a href="../HomePage/Index.html"><i class="fa-solid fa-house"></i></a>
         <a href="../SearchPage/Index.html" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
         <a href="../NotificationPage/Index.html"><i class="fa-solid fa-bell"></i></a>
         <a href="../ProfilePage/Index.html"><i class="fa-solid fa-user"></i></a>

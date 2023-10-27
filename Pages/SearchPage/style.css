@@ -58,11 +58,11 @@ header :hover {
     width: 100%;
     height: auto;
     background-color: var(--gray-main);
-    padding: 11px 14px; 
-    border-top: solid var(--gray-hover-dark) 0.25px; 
+    padding: 11px 14px;
+    border-top: solid var(--gray-hover-dark) 0.25px;
 }
 
-.Items:hover{
+.Items:hover {
     background-color: var(--gray-hover-dark);
 }
 
@@ -73,6 +73,13 @@ header :hover {
     color: var(--black);
     padding: 10px 14px;
 }
+
+.SearchEmpty {
+    color: var(--gray-hover-dark-2);
+    padding: 10px 14px;
+    font-weight: 400;
+}
+
 
 .SearchBar {
     width: 100%;
@@ -131,6 +138,81 @@ header :hover {
     font-weight: 600;
 
 }
+
+.NoFoundSearch {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.NoFoundSearchImage {
+    width: 50px;
+    height: 50px;
+}
+
+.NoFoundSearchText {
+    font-weight: 400;
+}
+
+.NoFoundSearchText {
+    font-size: 20px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.dots {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInDots 2s ease-out forwards infinite;
+}
+
+.dots:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.dots:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.dots:nth-child(3) {
+    animation-delay: 4s;
+}
+
+
+@keyframes fadeInDots {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.NoFoundSearch{
+    display: none;
+}
+
 
 footer {
     height: 73px;
@@ -234,7 +316,7 @@ footer .fa-solid {
     .SearchText {
         font-size: 35px;
     }
-    
+
 
     .TopContainer h1 {
         font-size: 35px;
