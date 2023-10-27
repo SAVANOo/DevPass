@@ -83,3 +83,12 @@ function fetchData(container, jsonUrl) {
 fetchData(conteudos.Vagas, conteudos.jsonUrlVagas);
 fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades);
 fetchData(conteudos.Noticias, conteudos.jsonUrlNoticias);
+
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("desktopSearchInput");
+
+searchButton.addEventListener("click", () => {
+    const searchTerm = searchInput.value;
+    const redirectURL = '../SearchPage/Index.html' + `?search=${encodeURIComponent(searchTerm)}`;
+    window.location.href = redirectURL;
+});
