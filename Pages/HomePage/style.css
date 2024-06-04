@@ -59,6 +59,51 @@ header :hover {
     padding: 22px 14px;
 }
 
+.Banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.BannerText {
+    font-size: 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.BannerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.BannerContent {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 2px 2px var(--gray-hover-dark-2);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 5px;
+}
+
+.Icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.Icon {
+    width: 50px;
+    height: auto;
+}
+
 .Container {
     width: 100vw;
     height: auto;
@@ -273,6 +318,7 @@ footer .fa-solid {
     }
 
     #Welcome {
+        padding: 20px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -300,6 +346,28 @@ footer .fa-solid {
     #Welcome img {
         width: 55%;
         height: auto;
+    }
+
+    .BannerText {
+        font-size: 30px;
+    }
+
+    .BannerContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .Icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .Icon {
+        width: 75px;
     }
 
     .TopContainer h1 {
