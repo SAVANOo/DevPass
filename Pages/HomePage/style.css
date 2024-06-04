@@ -330,35 +330,41 @@ footer .fa-solid {
     }
 
     #Welcome {
-        padding: 20px;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        text-align: right;
+        gap: 15px;
     }
 
-    #Welcome h1 {
+    .WelcomeTitle {
         font-family: 'Oxygen', sans-serif;
-        font-weight: 400;
-        font-size: 45px;
-    }
-
-    #Welcome span {
         font-weight: 700;
+        font-size: 80px;
     }
 
-    #Welcome span span:nth-child(1) {
-        color: var(--blue-main);
-    }
-
-    #Welcome span:nth-child(2) {
-        color: var(--green-main);
+    .WelcomeSubtitle {
+        font-weight: 600;
+        font-size: 20px;
     }
 
     #Welcome img {
         width: 55%;
         height: auto;
+    }
+
+    .text-color-orange {
+        color: var(--orange-main);
+    }
+
+    .text-color-green {
+        color: var(--green-main);
+    }
+
+    .text-color-blue {
+        color: var(--blue-main);
     }
 
     .BannerText {
