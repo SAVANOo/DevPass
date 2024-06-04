@@ -313,6 +313,18 @@ footer .fa-solid {
         font-size: 12px;
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .WelcomeText {
         font-size: 35px;
     }
@@ -321,6 +333,7 @@ footer .fa-solid {
         padding: 20px;
         width: 100%;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
     }
@@ -376,6 +389,13 @@ footer .fa-solid {
 
     .TopContainer a {
         font-size: 18px;
+    }
+
+    .Container {
+        max-width: 1600px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .Container img {
