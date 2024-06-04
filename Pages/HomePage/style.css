@@ -33,8 +33,21 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--white);
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -42,6 +55,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
+    width: 100%;
 }
 
 header :hover {
@@ -105,61 +119,17 @@ header :hover {
 }
 
 .Container {
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
-.ContainerItems {
-    margin: 13px 0px 13px 14px;
-    justify-content: left;
-    text-align: left;
-    cursor: pointer;
-    display: grid;
-    grid-auto-flow: column;
-    scroll-behavior: auto;
-    gap: 0.20rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    list-style: none;
+.CursosItem {
+    width: 100%;
 }
 
-.ContainerItems a {
-    overflow: hidden;
-}
-
-.TopContainer {
-    padding: 0 14px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.TopContainer h1,
-.TopContainer a {
-    font-weight: 400;
-}
-
-.TopContainer h1 {
-    font-size: 20px;
-}
-
-
-.TopContainer a {
-    text-decoration-line: none;
-    font-size: 12px;
-}
-
-.Items {
-    display: flex;
-    flex-direction: column;
-    margin-right: 14px;
-    width: 101px;
-    height: 157px;
+.CursosImage {
+    width: 100%;
+    height: auto;
 }
 
 .VagaTitle {
@@ -177,11 +147,6 @@ header :hover {
 
 .VagaTitle:hover {
     text-decoration-line: underline;
-}
-
-.Container img {
-    width: 101px;
-    height: 101px;
 }
 
 footer {
@@ -234,7 +199,6 @@ footer .fa-solid {
         background-color: var(--blue-main);
         height: 73px;
         align-items: center;
-        max-width: 100vw;
         justify-content: space-between;
     }
 
@@ -313,18 +277,6 @@ footer .fa-solid {
         font-size: 12px;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .WelcomeText {
         font-size: 35px;
     }
@@ -340,6 +292,11 @@ footer .fa-solid {
         gap: 15px;
     }
 
+    .WelcomeImage {
+        width: 50%;
+        height: auto;
+    }
+
     .WelcomeTitle {
         font-family: 'Oxygen', sans-serif;
         font-weight: 700;
@@ -351,10 +308,6 @@ footer .fa-solid {
         font-size: 20px;
     }
 
-    #Welcome img {
-        width: 55%;
-        height: auto;
-    }
 
     .text-color-orange {
         color: var(--orange-main);
@@ -390,24 +343,19 @@ footer .fa-solid {
         width: 75px;
     }
 
-    .TopContainer h1 {
-        font-size: 35px;
-    }
-
-    .TopContainer a {
-        font-size: 18px;
-    }
-
     .Container {
         max-width: 1600px;
+        padding: 0 12px;
         justify-content: center;
         display: flex;
         flex-direction: column;
     }
 
-    .Container img {
-        width: 309px;
-        height: 153px;
+    .ContainerTop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .Items {
@@ -418,8 +366,16 @@ footer .fa-solid {
         height: 179px;
     }
 
-    .VagaTitle {
-        font-size: 15px;
+    .CursosItem {
+        width: 300px;
     }
+
+    .CursosItems {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
 
 }
