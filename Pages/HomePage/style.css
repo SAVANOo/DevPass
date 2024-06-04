@@ -330,6 +330,7 @@ footer .fa-solid {
     }
 
     #Welcome {
+        padding: 15px 30px;
         width: 100%;
         display: flex;
         flex-direction: row;
