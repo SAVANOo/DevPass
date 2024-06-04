@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 
 :root {
     --white: #fff;
     --black: #000;
 
-    --orange-main: #FF8A00;
+    --orange-main: #ff8a00;
     --orange-hover-bright: #ffbb6e;
     --orange-hover-dark: #834600;
 
-    --blue-main: #0500FF;
+    --blue-main: #0500ff;
     --blue-hover-bright: #5c59ff;
     --blue-hover-dark: #0300a0;
 
-    --green-main: #05FF00;
+    --green-main: #05ff00;
     --green-hover-bright: #65ff62;
     --green-hover-dark: #03a500;
 
-    --gray-main: #D9D9D9;
+    --gray-main: #d9d9d9;
     --gray-hover-dark: #8a8a8a;
-    --gray-hover-dark-2: #3F3F3F;
+    --gray-hover-dark-2: #3f3f3f;
 }
 
 * {
@@ -30,11 +30,14 @@
 
 /* Media query para celulares */
 body {
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--white);
     min-height: 100vh;
     width: 100vw;
-    margin-bottom: 100px;
+   
 }
 
 header {
@@ -72,7 +75,7 @@ header :hover {
     display: grid;
     grid-auto-flow: column;
     scroll-behavior: auto;
-    gap: 0.20rem;
+    gap: 0.2rem;
     overflow-x: auto;
     overflow-y: hidden;
     overscroll-behavior-x: contain;
@@ -102,7 +105,6 @@ header :hover {
 .TopContainer h1 {
     font-size: 20px;
 }
-
 
 .TopContainer a {
     text-decoration-line: none;
@@ -139,18 +141,60 @@ header :hover {
     height: 101px;
 }
 
-footer {
-    height: 73px;
+.desktop-footer {
+    margin-top: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 21px 31px;
-    background-color: var(--gray-main);
-    position: fixed;
-    bottom: 0;
+    height: 321px;
+    background-color: #0500ff;
+    padding: 31px 157px;
     width: 100%;
     box-shadow: 0px -4px 6px 0px #00000040;
 }
 
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-footer h3 {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.desktop-footer a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.desktop-footer .icons {
+    margin: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop-footer .socials-network {
+    display: flex;
+    gap: 10px;
+}
+
+.icons p {
+    text-align: center;
+    color: var(--white);
+}
 
 footer .active i {
     color: var(--blue-main);
@@ -164,9 +208,9 @@ footer .fa-solid {
     text-align: center;
 }
 
-
 /* Media query para tablets */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+}
 
 /* Media query para desktops */
 @media screen and (min-width: 1024px) {
@@ -178,7 +222,6 @@ footer .fa-solid {
         min-height: 100vh;
         max-width: 100vw;
         background-color: var(--white);
-
     }
 
     .desktop {
@@ -243,7 +286,7 @@ footer .fa-solid {
     .SearchBar {
         width: 292px;
         height: 33px;
-        background-color: #FFFFFF80;
+        background-color: #ffffff80;
         border-radius: 30px;
         display: flex;
         align-items: center;
@@ -259,11 +302,10 @@ footer .fa-solid {
         outline: none;
         background: transparent;
         cursor: initial;
-
     }
 
     #desktopSearchInput::-webkit-input-placeholder {
-        color: #1C1C1C;
+        color: #1c1c1c;
         font-style: bold;
         font-size: 12px;
     }
@@ -280,7 +322,7 @@ footer .fa-solid {
     }
 
     #Welcome h1 {
-        font-family: 'Oxygen', sans-serif;
+        font-family: "Oxygen", sans-serif;
         font-weight: 400;
         font-size: 45px;
     }
@@ -326,5 +368,4 @@ footer .fa-solid {
     .VagaTitle {
         font-size: 15px;
     }
-
 }
