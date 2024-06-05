@@ -125,6 +125,25 @@ header :hover {
     height: auto;
 }
 
+.ContainerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Cursos {
+    padding: 15px;
+}
+
+.CursosItems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .CursosItem {
     width: 100%;
 
@@ -398,12 +417,6 @@ footer .fa-solid {
         flex-direction: column;
     }
 
-    .ContainerTop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .Items {
         display: flex;
@@ -413,8 +426,8 @@ footer .fa-solid {
         height: 179px;
     }
 
-    .CursosItem {
-        width: 300px;
+    .Cursos {
+        padding: 30px;
     }
 
     .CursosItems {
@@ -422,6 +435,10 @@ footer .fa-solid {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .CursosItem {
+        width: 18%;
     }
 
     .desktop {
