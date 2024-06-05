@@ -78,12 +78,10 @@ header :hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-
 .BannerText {
     font-size: 20px;
     text-align: center;
     color: var(--white);
-
 }
 
 .BannerImage {
@@ -118,7 +116,6 @@ header :hover {
     height: auto;
 }
 
-
 .Container {
     width: 100%;
     height: auto;
@@ -126,7 +123,6 @@ header :hover {
 
 .CursosItem {
     width: 100%;
-
 }
 
 .CursosImage {
@@ -150,7 +146,6 @@ header :hover {
 .VagaTitle:hover {
     text-decoration-line: underline;
 }
-
 
 footer {
     height: 73px;
@@ -188,6 +183,10 @@ footer {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+}
+
+.desktop-footer a:hover {
+    text-decoration: underline;
 }
 
 .desktop-footer .icons {
@@ -228,12 +227,11 @@ footer .fa-solid {
 }
 
 /* Media query para tablets */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+}
 
 /* Media query para desktops */
 @media screen and (min-width: 1024px) {
-
-
     body {
         min-height: 100vh;
         max-width: 100vw;
@@ -336,15 +334,13 @@ footer .fa-solid {
         gap: 15px;
     }
 
-
     .WelcomeImage {
         width: 50%;
         height: auto;
-
     }
 
     .WelcomeTitle {
-        font-family: 'Oxygen', sans-serif;
+        font-family: "Oxygen", sans-serif;
         font-weight: 700;
         font-size: 80px;
     }
@@ -353,7 +349,6 @@ footer .fa-solid {
         font-weight: 600;
         font-size: 20px;
     }
-
 
     .text-color-orange {
         color: var(--orange-main);
