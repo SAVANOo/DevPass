@@ -190,7 +190,7 @@ footer {
 }
 
 .desktop-footer .icons {
-    margin: 0 80px;
+    margin: 0px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
