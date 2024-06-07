@@ -432,14 +432,14 @@ footer {
     flex-direction: column;
 }
 
-.desktop-footer .footer-title {
+.footer .footer-title {
     color: var(--black);
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.desktop-footer a {
+.footer a {
     color: var(--white);
     text-decoration: none;
     font-size: 16px;
@@ -447,18 +447,18 @@ footer {
     line-height: 24px;
 }
 
-.desktop-footer a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
 
-.desktop-footer .icons {
+.footer .icons {
     margin: 0 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.desktop-footer .socials-network {
+.footer .socials-network {
     display: flex;
     gap: 10px;
 }

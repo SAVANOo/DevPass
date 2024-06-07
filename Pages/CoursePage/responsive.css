@@ -81,12 +81,12 @@
         width: 200px;
     }
 
-    footer {
-        padding: 10px 10vw;
+    .footer{
+        padding: 30px 10vw;
         height: 350px;
     }
 
-    footer .columns-container {
+    .footer .columns-container {
         gap: 10px;
     }
 
@@ -98,18 +98,22 @@
         font-size: 15px;
     }
 
-    footer .icons {
+    .footer .icons {
         width: 100%;
-        justify-content: space-between;
         margin: 0;
+        justify-content: space-between;
     }
 
     .icons p{
         font-size: 15px;
     }
 
-    footer .icons .brand img {
+    .footer .icons .brand img {
         width: 200px;
+    }
+
+    .icons .socials-network {
+        margin: 0;
     }
 
     .icons .socials-network img{
@@ -153,12 +157,12 @@
     }
 
 
-    footer{
+    .footer{
         gap: 10px;
         height: 435px;
     }
 
-    footer .columns-container{
+    .footer .columns-container{
         flex-wrap: wrap;
     }
 
