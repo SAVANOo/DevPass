@@ -159,7 +159,7 @@
 
     .footer{
         gap: 10px;
-        height: 435px;
+        height: 100%;
     }
 
     .footer .columns-container{
@@ -171,19 +171,19 @@
     }
 
     .columns-container .footer-column .footer-title {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .footer-column a {
-        font-size: 13px;
+        font-size: 11px;
     }
     
     .icons p{
-        font-size: 15px;
+        font-size: 11px;
     }
 
-    footer .icons .brand img {
-        width: 150px;
+    .footer .icons .brand img {
+        width: 100px;
     }
 
     .icons .socials-network img{
