@@ -1,0 +1,164 @@
+@media screen and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        padding: 0 10vw;
+
+    }
+
+    header .navbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .Content-screen {
+        padding: 0px 10vw;
+    }
+    
+    .Description {
+        margin: 50px 10vw 20px 10vw;
+    }
+
+    .Course-content {
+        margin: 20px 10vw;
+    }
+
+    .Course-content .Frame{
+        padding: 20px 50px;
+    }
+
+    .Container {
+        margin: 20px 0;
+        padding: 20px 10vw;
+    }
+
+    .CursosItems {
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .CursoItem img {
+        width: 100%;
+    }
+
+    .CursoItem {
+        width: 200px;
+    }
+
+    .footer{
+        padding: 30px 10vw;
+        height: 350px;
+    }
+
+    .footer .columns-container {
+        gap: 10px;
+    }
+
+    .columns-container .footer-column .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 15px;
+    }
+
+    .footer .icons {
+        width: 100%;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .icons p{
+        font-size: 15px;
+    }
+
+    .footer .icons .brand img {
+        width: 200px;
+    }
+
+    .icons .socials-network {
+        margin: 0;
+    }
+
+    .icons .socials-network img{
+        width: 40px;
+    }
+}
+
+
+@media screen and (max-width: 630px) {
+
+    
+    header {
+
+        height: 120px;
+    }
+
+    header .navbar {
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+    .Content-screen {
+        padding: 0px;
+    }
+
+    .Course-content .Frame{
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .CursosItems {
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .CursoItem img {
+        width: 100%;
+    }
+
+    .CursoItem {
+        min-width: 140px;
+        width: 25%;
+    }
+
+
+    .footer{
+        gap: 10px;
+        height: 100%;
+    }
+
+    .footer .columns-container{
+        flex-wrap: wrap;
+    }
+
+    .SearchBar {
+        width: 100%;
+    }
+
+    .columns-container .footer-column .footer-title {
+        font-size: 14px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+    }
+    
+    .icons p{
+        font-size: 11px;
+    }
+
+    .footer .icons .brand img {
+        width: 100px;
+    }
+
+    .icons .socials-network img{
+        width: 30px;
+    }
+}
