@@ -154,162 +154,29 @@ header .navbar {
     font-size: 12px;
 }
 
-
-.Header-course .Content {
-    position: relative;
-    /* Adicionando uma posição relativa para que o conteúdo dentro possa estar acima */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 157px;
-    height: 70vh;
+.Content-screen {
+    padding: 0px 157px;
 }
 
-.Header-course .Content::before {
-    content: '';
+.Screen {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (16/9 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+}
+
+.Screen-iframe {
     position: absolute;
-    /* Posicionamento absoluto em relação ao pai (.content) */
-    background-image: url(./Src/headerCourse/background\ curso.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px;
-    filter: blur(5.1px);
-    /* O mesmo blur aplicado à imagem de fundo */
-    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.Header-course .Content::after {
-    content: '';
-    position: absolute;
-    /* Posicionamento absoluto em relação ao pai (.content) */
-    background-image: url(./Src/headerCourse/sombra.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -100px;
-    filter: blur(5.1px);
-    /* O mesmo blur aplicado à imagem de fundo */
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: 100%;
-}
-
-.Content .Information-key {
-    position: relative;
-    min-width: 364px;
-}
-
-.Information-key .Sub-title,
-.Reviews {
-    margin-top: 8px;
-}
-
-.Reviews .yellow {
-    color: var(--yellow-main);
-}
-
-.Reviews .gray {
-    color: var(--gray-hover-dark);
-}
-
-.Information-key .Autor,
-.Language {
-    margin-top: 16px;
-}
-
-.Content .Course-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 48px;
-
-    min-width: 330px;
-    width: 70%;
-    height: 100%;
-    padding: 2px;
-    border: 2px solid #000;
-    background-color: var(--white);
-    transition: 0.3s ease;
-}
-
-.Course-card:hover {
-    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
-}
-
-.Course-card img {
-    width: 100%;
-    height: 50%;
-}
-
-.Course-card i {
-    font-size: 80px;
-    color: var(--white);
-    cursor: pointer;
-    position: absolute;
-    top: 139px;
-    left: calc(50% - 40px);
-    transition: 0.3s ease;
-}
-
-.Course-card i:hover {
-    color: var(--gray-hover-dark);
-}
-
-.Course-card .Value {
-    flex-grow: 3;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-}
-
-.Value #value {
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.Value #value-older {
-    color: var(--gray-hover-dark);
-    font-size: 20px;
-    text-decoration: line-through;
-}
-
-.Course-card .Button-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-grow: 2;
-}
-
-.Course-card #buy-button {
-    width: 90%;
-    height: 66px;
-    font-size: 25px;
-    padding: 12px 11px;
-    border-radius: 6px;
-    border: none;
-    background-color: var(--orange-main);
-    color: var(--white);
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-
-
-
-#buy-button:hover {
-    background-color: var(--orange-hover-dark);
+    border: 0;
 }
 
 .Description {
-    margin: 90px 157px 40px 157px;
+    margin: 50px 157px 40px 157px;
 }
 
 .Description p {
