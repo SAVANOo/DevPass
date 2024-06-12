@@ -1,4 +1,4 @@
-import { baseURL } from "../../config.js";
+import { baseUrl } from "../../config.js";
 const accessToken = localStorage.getItem("token");
 if (!accessToken) window.location.href = "../LoginPage/Index.html";
 
@@ -7,22 +7,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Func. de dar fetch na API
     function fetchCourses() {
-        fetch(`${baseURL}/cursos/cursos`, {
+        fetch(`${baseUrl}/cursos/cursos`, {
             method: "GET",
             headers: {
-                Accept: "application/json",
-                Autorization: `Bearer ${accessToken}`,
+                Accept: '"application/json"',
+                Authorization: `Bearer ${accessToken}`,
             },
         })
             .then((response) => {
                 if (response.ok) {
+                    console.log("Response:  " + response);
                     return response.json();
                 } else {
                     throw new Error("Network response was not ok");
                 }
             })
             .then((data) => {
-                displayCourses(data);
+                console.log("Data: ", data.cursos);
+                displayCourses(data.cursos);
             })
             .catch((error) => {
                 console.error(
@@ -70,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
             courseInfo.appendChild(coursePrice);
 
             // Append image and course info to course item
-            courseItem.appendChild(courseImg);
             courseItem.appendChild(courseInfo);
 
             // Append course item to videos container
