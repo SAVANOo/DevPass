@@ -1,122 +1,63 @@
-const containers = document.querySelectorAll('.ContainerItems');
+const accessToken = localStorage.getItem('token');
 
-// Função para adicionar funcionalidade de arrastar e rolagem a um único elemento
-function addDragAndScrollFunctionality(container) {
-    let isDragging = false;
-    let startPositionX = 0;
+if (!accessToken) window.location.href = "../LoginPage/Index.html";
 
-    container.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startPositionX = e.clientX;
-    });
+function buildComunity(titulo, descricao){
+  const comunidadeItem = document.createElement('div'); 
+  const comunidadeItens = document.querySelector(".comunity-cards");
+  
+      comunidadeItem.classList.add("card");
+          comunidadeItem.innerHTML=`
+                            <div class="card-content">
+                                <img class="icon-card" src="/Pages\ComunityPage\Src\Comunidades\Imagens\iconcomunidade.png">
+                                <h1 class="card-title">Xeloguers</h1>
+                                <p class="card-text">Comunidade dos Xeloguers. O Ruan sempre tá errado.</p>
+                          
+                            <button class="saiba-mais">Saiba Mais</button>
+                        </div>
+                    `
 
-    container.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const offsetX = e.clientX - startPositionX;
-        container.scrollLeft -= offsetX;
-        startPositionX = e.clientX;
-    });
+            comunidadeItens.appendChild(comunidadeItem);
 
-    container.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
-
-    container.addEventListener('mouseleave', () => {
-        isDragging = false;
-    });
+            console.log(comunidadeItem);
 }
 
-// Itere sobre os elementos e adicione a funcionalidade a cada um
-containers.forEach(container => {
-    addDragAndScrollFunctionality(container);
-});
 
-
-const conteudos = {
-    Vagas: document.querySelector("#ConteudoVagas"),
-    jsonUrlVagas: "Src/Vagas/data.json",
-
-    Comunidades: document.querySelector("#ConteudoComunidades"),
-    jsonUrlComunidades: "Src/Comunidades/data.json",
-
-    Noticias: document.querySelector("#ConteudoNoticias"),
-    jsonUrlNoticias: "Src/NoticiasDev/data.json"
-};
-
-// Função para buscar e atualizar os dados
-function fetchData(container, jsonUrl) {
-    fetch(jsonUrl)
-        .then((response) => response.json())
-        .then((data) => {
-            // Limpar o conteúdo atual da div
-            container.innerHTML = "";
-
-            // Iterar sobre os dados e criar elementos HTML
-            data.forEach((item) => {
-                const itemDiv = document.createElement("div");
-                itemDiv.classList.add("Items");
-
-                const img = document.createElement("img");
-                img.src = item.imagem;
-                img.alt = "ImagemItem";
-
-                const link = document.createElement("a");
-                link.href = item.link;
-                link.classList.add("VagaTitle");
-                link.textContent = item.titulo;
-                link.setAttribute("target", "_blank");
-
-
-
-                itemDiv.appendChild(img);
-                itemDiv.appendChild(link);
-
-                container.appendChild(itemDiv);
-            });
-        })
-        .catch((error) => {
-            console.error("Ocorreu um erro ao buscar os dados: ", error);
-        });
-}
-
-// Chame a função para buscar e atualizar os dados
-fetchData(conteudos.Vagas, conteudos.jsonUrlVagas);
-fetchData(conteudos.Comunidades, conteudos.jsonUrlComunidades);
-fetchData(conteudos.Noticias, conteudos.jsonUrlNoticias);
-
-
-function performSearch() {
-    const searchTerm = searchInput.value;
-    const redirectURL = '../SearchPage/Index.html' + `?search=${encodeURIComponent(searchTerm)}`;
-    window.location.href = redirectURL;
-}
-
-const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click", performSearch);
-
-const searchInput = document.getElementById("desktopSearchInput");
-searchInput.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-        performSearch();
-    }
-});
-
-function performSearch() {
-    
-
-fetch(`${baseurl}/comunidades`, {
-    method: 'POST',
+fetch(`${baseUrl}/comunidades`,{
+    method: 'GET',
     headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      nome: 'XELOGUISMO',
-      tema: 'TAL',
-      atividades: ['SIM'],
-      descricao: 'SIM'
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${accessToken}`
+    }
+})
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Falha ao acessar o recurso protegido. Por favor, faça login novamente.');
+        }
     })
-  })
-console.log()
+    .then(data => {
+        console.log('Comunidades', data);
+        let qntCards = 4;  // Number of cards to display
+        let colors = ["blue", "orange", "green", "grey"];
+        let bgColor = {
+            blue: "#0500ff",
+            orange: "#ff8a00",
+            green: "#05ff00",
+            grey: "#8a8a8a"
+        };
 
-}
+        data.forEach((element, index) => {
+            if (qntCards > 0) {
+                let color = colors[index % 4];  // Cycle through the colors
+                buildComunity(element.nome, element.descricao);
+                qntCards--;
+            }
+            console.log(element);
+        });
+    })
+    .catch(error => {
+        console.error('Erro na requisição:', error);
+        // window.location.href = "../LoginPage/Index.html";
+    });

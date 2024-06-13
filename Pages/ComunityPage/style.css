@@ -179,7 +179,7 @@ header :hover {
   padding: 50px;
 }
 
-#blue-bar {
+.bar {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -188,58 +188,12 @@ header :hover {
   position: relative;
   align-items: center;
   border-radius: 20px;
-  background-color: #0038ff;
-}
-
-#orange-bar {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 80px;
-  width: 100%;
-  position: relative;
-  align-items: center;
-  border-radius: 20px;
-  background-color: #ff8a00;
-}
-
-#green-bar {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 80px;
-  width: 100%;
-  position: relative;
-  align-items: center;
-  border-radius: 20px;
-  background-color: #05ff00;
-}
-
-#grey-bar {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 80px;
-  width: 100%;
-  position: relative;
-  align-items: center;
-  border-radius: 20px;
-  background-color: #737373;
 }
 
 .info-discussion {
   display: flex;
   width: 90%;
   justify-content: space-between;
-}
-
-.bar {
-  display: flex;
-  z-index: -1;
-  width: 90%;
-  justify-content: center;
-  position: absolute;
-  height: auto;
 }
 
 .acess-discussion {
@@ -287,7 +241,6 @@ header :hover {
   justify-content: start;
   align-items: center;
   margin-top: 50px;
-  border: solid 2px rgb(200, 255, 0);
   height: max-content;
   padding-left: 25px;
   padding-top: 100px;
@@ -295,48 +248,29 @@ header :hover {
   gap: 25px;
 }
 
-#blue-card {
+.card {
   display: flex;
   justify-content: center;
   align-items: last baseline;
   width: 23%;
   height: 450px;
   z-index: -1;
+
+  border-radius: 80px;
+}
+
+.blue-background {
   background-color: #0038ff;
-  border-radius: 80px;
+}
+.orange-background {
+  background-color: var(--orange-main);
 }
 
-#orange-card {
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-  width: 23%;
-  height: 450px;
-  z-index: -1;
-  background-color: #FF8A00;
-  border-radius: 80px;
+.green-background {
+  background-color: var(--green-main);
 }
-
-#green-card{
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-  width: 23%;
-  height: 450px;
-  z-index: -1;
-  background-color: #05FF00;
-  border-radius: 80px;
-}
-
-#grey-card {
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-  width: 23%;
-  height: 450px;
-  z-index: -1;
-  background-color: #737373;
-  border-radius: 80px;
+.grey-background {
+  background-color: var(--gray-hover-dark);
 }
 
 .card-title {
@@ -358,7 +292,7 @@ header :hover {
   height: 50px;
   align-items: center;
   justify-content: center;
-  background-color: #0038ff;
+  background-color: transparent;
   border: solid white 2px;
   color: white;
   font-size: 20px;

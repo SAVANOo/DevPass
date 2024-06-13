@@ -1,0 +1,35 @@
+[{
+    "id": 0,
+    "nome": "string",
+    "tema": "string",
+    "atividades": [
+      "string"
+    ],
+    "descricao": "string",
+    "membros": [
+      {
+        "id": 0,
+        "name": "string",
+        "email": "string",
+        "participacao_em_comunidades": "string"
+      }
+    ]
+  },
+{
+    "id": 2,
+    "nome": "string",
+    "tema": "string",
+    "atividades": [
+      "string"
+    ],
+    "descricao": "string",
+    "membros": [
+      {
+        "id": 0,
+        "name": "string",
+        "email": "string",
+        "participacao_em_comunidades": "string"
+      }
+    ]
+  }
+]
