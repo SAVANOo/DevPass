@@ -1,181 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="responsive.css" />
+		<script
+		src="https://kit.fontawesome.com/10c2a015e5.js"
+		crossorigin="anonymous"
+		></script>
+		<script src="/config.js"></script>
+		<script src="script.js" defer></script>
+		<link rel="icon" type="image/x-icon" href="../Src/favicon.svg" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/10c2a015e5.js" crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="../Src/favicon.svg" />
+		<title>&lt;DevPass&gt;</title>
+	</head>
+	<body>
+		<header class="Header">
+			<a href="../HomePage/Index.html">
+				<img
+					src="../Src/HeaderIcon/LogoDevPass.svg"
+					class="LogoDevPass"
+					alt="Logo DevPass"
+				/>
+			</a>
 
-    <title>&lt;DevPass&gt;</title>
-</head>
+			<div class="Navbar">
+				<div class="SearchBar">
+					<i
+						id="searchButton"
+						class="fa-solid fa-magnifying-glass searchButton"
+					></i>
+					<input
+						id="desktopSearchInput"
+						type="text"
+						placeholder="Vagas, comunidades e mais..."
+					/>
+				</div>
+				<div class="Navigation">
+					<a href="#" class="HeaderLinks">Cursos</a>
+					<a href="#" class="HeaderLinks">Comunidades</a>
+					<a
+						href="../LoginPage/Index.html"
+						class="HeaderLinks HeaderLogin"
+						><i class="fa-solid fa-user"></i> Login</a
+					>
+				</div>
+			</div>
+		</header>
 
-<body>
-    <header class="mobile">
-        <img src="../Src/HeaderIcon/LogoDevPass.png" alt="Logo DevPass" class="LogoDevPass" />
-        <img src="../Src/HeaderIcon/message-solid 1.svg" alt="Message Icon" class="MessageIcon" />
-    </header>
+		<main>
+			<div class="ContainerWelcome">
+				<h2 class="WelcomeText">Seja bem vindo, <b>Dev!</b></h2>
+				<div id="Welcome" class="WelcomeInformation">
+					<img class="WelcomeImage" src="Src/HomeImage.svg" alt="HomeImage" />
+					<div class="WelcomeDescription">
+						<h1 class="WelcomeTitle">
+							<span class="text-color-orange">Desenvolvendo</span> o
+							<span class="text-color-green">passe</span> para o
+							<span class="text-color-blue">futuro</span>.
+						</h1>
+						<p class="WelcomeSubtitle">
+							Inovação e aprendizado unidos para te fazer alcançar um novo nível
+						</p>
+					</div>
+				</div>
+			</div>
 
-    <header class="desktop">
-        <a href="../HomePage/Index.html">
-            <img src="../Src/HeaderIcon/LogoDevPass.svg" class="LogoDevPass" alt="Logo DevPass" />
-        </a>
+			<div class="Banner">
+				<div class="BannerContent">
+					<h3 class="BannerText">Atualize-se com o que há de melhor</h3>
+					<div class="Icons">
+						<img
+							class="Icon"
+							src="Src/banner/icons/icon (1).png"
+							alt="Imagem 1"
+						/>
+						<img
+							class="Icon"
+							src="Src/banner/icons/icon (2).png"
+							alt="Imagem 2"
+						/>
+						<img
+							class="Icon"
+							src="Src/banner/icons/icon (3).png"
+							alt="Imagem 3"
+						/>
+						<img
+							class="Icon"
+							src="Src/banner/icons/icon (4).png"
+							alt="Imagem 4"
+						/>
+						<img
+							class="Icon"
+							src="Src/banner/icons/icon (5).png"
+							alt="Imagem 5"
+						/>
+						<img
+							class="Icon"
+							src="Src/banner/icons/icon (6).png"
+							alt="Imagem 6"
+						/>
+					</div>
+				</div>
+				<img
+					class="BannerImage"
+					src="Src/banner/background.png"
+					alt="Imagem de fundo do Banner"
+				/>
+			</div>
 
-        <div class="navbar">
-            <div class="SearchBar">
-                <i id="searchButton" class="fa-solid fa-magnifying-glass searchButton"></i>
-                <input id="desktopSearchInput" type="text" placeholder="Vagas, comunidades, serviços e mais..." />
-            </div>
-            <div class="Navigation">
-                <a href="#" class="HeaderLinks">Cursos</a>
-                <a href="#" class="HeaderLinks">Comunidades</a>
-                <a href="../ProfilePage/Index.html" class="HeaderLinks HeaderLogin"><i class="fa-solid fa-user"></i>
-                    Login</a>
-            </div>
-        </div>
+			<div class="Container Cursos" id="Cursos">
+				<div class="ContainerTop">
+					<h2 class="ContainerTitle">Cursos</h2>
 
-        </div>
-    </header>
-    <main>
-        <div class="Container">
-            <h1 class="WelcomeText">Seja bem vindo<b> usuário</b></h1>
-        </div>
+					<a href="#" class="Course Button">
+						ver todos <i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
 
-        <section id="Welcome" class="desktop Container">
-            <img class="WelcomeImage" src="Src/HomeImage.svg" alt="HomeImage">
-            <div>
-                <h1 class="WelcomeTitle"><span class="text-color-orange">Desenvolvendo</span> o <span
-                        class="text-color-green">passe</span> para o <span class="text-color-blue">futuro</span>.
-                </h1>
-                <h2 class="WelcomeSubtitle">Inovação e aprendizado unidos para te fazer alcançar um novo nível</h2>
-            </div>
-        </section>
+				<div class="Cursos-Carousel">
+					<button class="CarouselBtn Prev">❮</button>
+					<div class="CursosItems">
+					</div>
+					<button class="CarouselBtn Next">❯</button>
+				</div>
+			</div>
 
-        <div class="Banner">
-            <div class="BannerContent">
-                <h3 class="BannerText">Atualize-se com o que há de melhor</h3>
-                <div class="Icons">
-                    <img class="Icon" src="Src/banner/icons/icon (1).png" alt="Imagem 1">
-                    <img class="Icon" src="Src/banner/icons/icon (2).png" alt="Imagem 2">
-                    <img class="Icon" src="Src/banner/icons/icon (3).png" alt="Imagem 3">
-                    <img class="Icon" src="Src/banner/icons/icon (4).png" alt="Imagem 4">
-                    <img class="Icon" src="Src/banner/icons/icon (5).png" alt="Imagem 5">
-                    <img class="Icon" src="Src/banner/icons/icon (6).png" alt="Imagem 6">
-                </div>
-            </div>
-            <img class="BannerImage" src="Src/banner/background.png" alt="Imagem de fundo do Banner">
-        </div>
-        <div class="Container Cursos" id="Cursos">
-            <div class="ContainerTop">
-                <h1 class="ContainerTitle">Cursos</h1>
-                <a class="ContainerLink" href="#">ver todos</a>
-            </div>
+			<div class="Banner2">
+				<div class="Banner-description">
+					<h2 class="BannerTitle">
+						<span class="text-color-orange">Crie</span> ou
+						<span class="text-color-green">Participe</span> de
+						<span class="text-color-blue">Comunidades</span>.
+					</h2>
+					<p class="BannerSubtitle">Faça novas conexões e parcerias</p>
+				</div>
+				<img class="Banner2Image" src="./Src/banner-2/backgound.png" alt="" />
+			</div>
 
-            <div class="CursosItems">
-                <div class="CursosItem">
-                    <img class="CursosImage" src="Src/cursos/tumbnail.png" alt="Imagem do curso 1">
-                    <h3 class="CursosTitle">Introdução à programação de computadores</h3>
-                    <h3 class="CursosAuthor">Diego Mariano, Ph.D.</h3>
-                    <div class="CursosRating">
-                        <h3 class="RatingNumeral">4,0</h3>
-                        <img class="RatingStars" src="Src/cursos/estrelas.png" alt="Rating de estrelas">
-                    </div>
-                    <h3 class="CursosPrice">R$ 150,00</h3>
-                </div>
-                <div class="CursosItem">
-                    <img class="CursosImage" src="Src/cursos/tumbnail.png" alt="Imagem do curso 1">
-                    <h3 class="CursosTitle">Introdução à programação de computadores</h3>
-                    <h3 class="CursosAuthor">Diego Mariano, Ph.D.</h3>
-                    <div class="CursosRating">
-                        <h3 class="RatingNumeral">4,0</h3>
-                        <img class="RatingStars" src="Src/cursos/estrelas.png" alt="Rating de estrelas">
-                    </div>
-                    <h3 class="CursosPrice">R$ 150,00</h3>
-                </div>
-                <div class="CursosItem">
-                    <img class="CursosImage" src="Src/cursos/tumbnail.png" alt="Imagem do curso 1">
-                    <h3 class="CursosTitle">Introdução à programação de computadores</h3>
-                    <h3 class="CursosAuthor">Diego Mariano, Ph.D.</h3>
-                    <div class="CursosRating">
-                        <h3 class="RatingNumeral">4,0</h3>
-                        <img class="RatingStars" src="Src/cursos/estrelas.png" alt="Rating de estrelas">
-                    </div>
-                    <h3 class="CursosPrice">R$ 150,00</h3>
-                </div>
-                <div class="CursosItem">
-                    <img class="CursosImage" src="Src/cursos/tumbnail.png" alt="Imagem do curso 1">
-                    <h3 class="CursosTitle">Introdução à programação de computadores</h3>
-                    <h3 class="CursosAuthor">Diego Mariano, Ph.D.</h3>
-                    <div class="CursosRating">
-                        <h3 class="RatingNumeral">4,0</h3>
-                        <img class="RatingStars" src="Src/cursos/estrelas.png" alt="Rating de estrelas">
-                    </div>
-                    <h3 class="CursosPrice">R$ 150,00</h3>
-                </div>
-            </div>
-        </div>
-    </main>
+			<div class="Container Communities" id="Communities">
+				<div class="ContainerTop">
+					<h2 class="ContainerTitle">Comunidades</h2>
 
-    <footer class="mobile">
-        <a href="../HomePage/Index.html" class="active"><i class="fa-solid fa-house"></i></a>
-        <a href="../SearchPage/Index.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="../NotificationPage/Index.html"><i class="fa-solid fa-bell"></i></a>
-        <a href="../ProfilePage/Index.html"><i class="fa-solid fa-user"></i></a>
-    </footer>
+					<a href="#" class="Community Button">
+						ver todas <i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
 
-    <footer class="desktop-footer desktop">
-        <div class="columns-container">
-            <div class="footer-column">
-                <h3 class="footer-title">Páginas</h3>
-                <a href="#">Home</a>
-                <a href="#">Cursos</a>
-                <a href="#">Comunidades</a>
-            </div>
-            <div class="footer-column">
-                <h3 class="footer-title">Formações</h3>
-                <a href="#">Cursos de Python</a>
-                <a href="#">Cursos de Javascript</a>
-                <a href="#">Cursos de Ciência de Dados</a>
-                <a href="#">Inteligência Artificial</a>
+				<div class="CommunityCarousel">
+					<button class="CarouselBtn Prev Communities">❮</button>		
+					<div class="CommunityItems">
 
-            </div>
-            <div class="footer-column">
-                <h3 class="footer-title">Sobre</h3>
-                <a href="#">Políticas de Privacidade</a>
-                <a href="#">Direitos Autorais</a>
-                <a href="#">Termos de Uso</a>
-            </div>
-            <div class="footer-column">
-                <h3 class="footer-title">Suporte</h3>
-                <a href="#">Central de Ajuda</a>
-                <a href="#">Comunidade Discord</a>
-            </div>
-        </div>
-        <div class="icons">
-            <div class="brand">
-                <img src="./Src/logo.svg">
-            </div>
-            <div>
-                <p>© 2024 DevPass. <br>
-                    Inc.</p>
-            </div>
-            <div class="socials-network">
-                <a href="#">
-                    <img src="./Src/instagram-logo.svg">
-                </a>
-                <a href="#">
-                    <img src="./Src/facebook-logo.svg">
-                </a>
-                <a href="#">
-                    <img src="./Src/x-logo.svg">
-                </a>
+					</div>
+					<button class="CarouselBtn Next Communities">❯</button>
+				</div>
+			</div>
 
-            </div>
-        </div>
-    </footer>
-</body>
+			<div class="Banner3">
+				<img class="Banner3Image" src="./Src/banner-3/DP.svg" alt="Logo minimalista DevPass"/>
+				<h2 class="Banner3Title">Venha fazer parte desse movimento</h2>
+			</div>
+		</main>
 
+		<footer class="footer">
+			<div class="columns-container">
+				<div class="footer-column">
+					<h3 class="footerTitle">Páginas</h3>
+					<a href="#">Home</a>
+					<a href="#">Cursos</a>
+					<a href="#">Comunidades</a>
+				</div>
+				<div class="footer-column">
+					<h3 class="footerTitle">Formações</h3>
+					<a href="#">Cursos de Python</a>
+					<a href="#">Cursos de Javascript</a>
+					<a href="#">Cursos de Ciência de Dados</a>
+					<a href="#">Inteligência Artificial</a>
+				</div>
+				<div class="footer-column">
+					<h3 class="footerTitle">Sobre</h3>
+					<a href="#">Políticas de Privacidade</a>
+					<a href="#">Direitos Autorais</a>
+					<a href="#">Termos de Uso</a>
+				</div>
+				<div class="footer-column">
+					<h3 class="footerTitle">Suporte</h3>
+					<a href="#">Central de Ajuda</a>
+					<a href="#">Comunidade Discord</a>
+				</div>
+			</div>
+			<div class="icons">
+				<div class="brand">
+					<img src="./Src/logo.svg" />
+				</div>
+				<div>
+					<p>
+						© 2024 DevPass. <br />
+						Inc.
+					</p>
+				</div>
+				<div class="socials-network">
+					<a href="#">
+						<img src="./Src/instagram-logo.svg" />
+					</a>
+					<a href="#">
+						<img src="./Src/facebook-logo.svg" />
+					</a>
+					<a href="#">
+						<img src="./Src/x-logo.svg" />
+					</a>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
