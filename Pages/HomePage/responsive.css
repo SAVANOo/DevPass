@@ -1,4 +1,13 @@
 @media screen and (max-width: 1024px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
     header {
         display: flex;
         flex-direction: column;
@@ -9,60 +18,69 @@
 
     }
 
-    header .navbar {
+    header .Navbar {
         width: 100%;
         justify-content: space-between;
     }
 
-    .HeaderCourse .BackgroundImage1{
-        height: 90vw;
+    .WelcomeText {
+        font-size: 30px;
+        padding: 22px 10vw;
     }
 
-    .HeaderCourse .InformationKey {
-        margin-top: 20px;
+    .WelcomeInformation {
+        flex-direction: column;
+        padding: 0 10vw;
+    }
+
+    .WelcomeInformation .WelcomeImage {
+        width: 60%;
+    }
+
+    .WelcomeDescription{
         text-align: center;
     }
 
-    .HeaderCourse .Content {
-        height: 100%;
-        padding: 0 10vw;
+    .WelcomeDescription .WelcomeSubtitle {
+        
+        margin-top: 5px;
+    }
+
+    .Icons {
+        display: flex;
+        gap: 30px;
+    }
+
+    .Icon {
+        width: 70px;
+    }
+
+    .Banner2{
+        display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
-    .HeaderCourse .CourseCard {
-        width: 50vw;
+    .BannerDescription{
+        text-align: center;
+        gap: 5px;
     }
 
-    .CourseCard img {
+    .Banner3{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .Banner3Image{
         width: 100%;
-        height: 50%;
+        min-width: 250px;
+    }
+    
+    .Banner3Title{
+        width: 100%;
+        min-width: 300px;
     }
 
-    .CourseCard i {
-        top: calc(30%);
-    }
-
-    .CourseCard .Value {
-        margin: 20px 0;
-    }
-
-    .CourseCard .Value #value {
-        font-size: 40px;
-    }
-
-    .CourseCard #buyButton {
-        margin-bottom: 20px;
-    }
-
-    .Description {
-        margin: 80px 10vw 20px 10vw;
-    }
-
-
-    .Container {
-        margin: 20px 0;
-        padding: 20px 10vw;
-    }
 
     .footer {
         padding: 30px 10vw;
@@ -107,31 +125,72 @@
 
 @media screen and (max-width: 630px) {
 
+    h1 {
+        font-size: 45px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
     header {
         height: 120px;
     }
 
-    header .navbar {
+    header .Navbar {
+        width: 100%;
         min-width: 334px;
         flex-direction: column-reverse;
+        align-items: center;
         gap: 5px;
     }
 
-    .SearchBar {
+    .SearchBar{
         min-width: 334px;
     }
-
-    .HeaderCourse .BackgroundImage1{
-        height: 130vh;
+    
+    .WelcomeDescription .WelcomeImage {
+        min-width: 380px;
     }
 
-    .CourseContent .FrameHeader{
-        padding: 25px 35px;
+    .WelcomeText {
+        font-size: 30px;
+        padding: 22px 10vw;
     }
 
-    .ContentInfo{
-        padding: 25px 30px;
+    .BannerText {
+        font-size: 25px;
     }
+
+    .Icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .Icon {
+        width: 70px;
+    }
+
+    .Banner2Image{
+        min-width: 300px;
+    }
+
+    .ContainerTitle{
+        width: 50%;
+        word-wrap: break-word;
+    }
+
+    .footer {
+        gap: 10px;
+        height: 100%;
+    }
+
+    .footer .columns-container {
+        flex-wrap: wrap;
+    }
+
     .footer {
         gap: 10px;
         height: 100%;
