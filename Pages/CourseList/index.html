@@ -1,245 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <script
-            src="https://kit.fontawesome.com/10c2a015e5.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="script.js" defer></script>
-        <script src="/config.js"></script>
-        <link rel="icon" type="image/x-icon" href="../Src/favicon.svg" />
-        <title>&lt;DevPass&gt;</title>
-    </head>
-    <body>
-        <header class="mobile">
-            <img
-                src="../Src/HeaderIcon/LogoDevPass.png"
-                alt="Logo DevPass"
-                class="LogoDevPass"
-            />
-            <img
-                src="../Src/HeaderIcon/message-solid 1.svg"
-                alt="Message Icon"
-                class="MessageIcon"
-            />
-        </header>
 
-        <header class="desktop">
-            <a href="../HomePage/Index.html">
-                <img
-                    src="../Src/HeaderIcon/LogoDevPass.svg"
-                    class="LogoDevPass"
-                    alt="Logo DevPass"
-                />
-            </a>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/10c2a015e5.js" crossorigin="anonymous"></script>
+    <script src="../../config.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../Src/favicon.svg" />
+    <title>&lt;DevPass&gt;</title>
+</head>
 
-            <div class="navbar">
-                <div class="SearchBar">
-                    <i
-                        id="searchButton"
-                        class="fa-solid fa-magnifying-glass searchButton"
-                    ></i>
-                    <input
-                        id="desktopSearchInput"
-                        type="text"
-                        placeholder="Vagas, comunidades, serviços e mais..."
-                    />
-                </div>
-                <div class="Navigation">
-                    <a href="#" class="HeaderLinks">Cursos</a>
-                    <a href="../HomePage/Index.html#Communities" class="HeaderLinks">Comunidades</a>
-                    <a
-                        href="../ProfilePage/Index.html"
-                        class="HeaderLinks HeaderLogin"
-                        ><i class="fa-solid fa-user"></i> Login</a
-                    >
-                </div>
+<body>
+    <header class="mobile">
+        <img src="../Src/HeaderIcon/LogoDevPass.png" alt="Logo DevPass" class="LogoDevPass" />
+        <img src="../Src/HeaderIcon/message-solid 1.svg" alt="Message Icon" class="MessageIcon" />
+    </header>
+
+    <header class="desktop">
+        <a href="../HomePage/Index.html">
+            <img src="../Src/HeaderIcon/LogoDevPass.svg" class="LogoDevPass" alt="Logo DevPass" />
+        </a>
+
+        <div class="navbar">
+            <div class="SearchBar">
+                <i id="searchButton" class="fa-solid fa-magnifying-glass searchButton"></i>
+                <input id="desktopSearchInput" type="text" placeholder="Vagas, comunidades, serviços e mais..." />
             </div>
-        </header>
-        <main>
-            <h1 class="WelcomeText">Cursos</h1>
-
-            <div class="courses-container">
-                <button class="verTudo">Ver tudo</button>
-                <h2>Cursos mais assinados do mês</h2>
-                <div id="videos-container1" class="videos-container"></div>
-                <div class="scroll-buttons">
-                    <button
-                        class="scroll-button left"
-                        data-container="videos-container1"
-                    >
-                        <img
-                            class="setinha2"
-                            src="Src/setinha2.png"
-                            alt="Seta Esquerda"
-                        />
-                    </button>
-                    <button
-                        class="scroll-button right"
-                        data-container="videos-container1"
-                    >
-                        <img
-                            class="setinha"
-                            src="Src/setinha.png"
-                            alt="Seta Direita"
-                        />
-                    </button>
-                </div>
+            <div class="Navigation">
+                <a href="#" class="HeaderLinks">Cursos</a>
+                <a href="../HomePage/Index.html#Communities" class="HeaderLinks">Comunidades</a>
+                <a href="../ProfilePage/Index.html" class="HeaderLinks HeaderLogin"><i class="fa-solid fa-user"></i>
+                    Login</a>
             </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="WelcomeText">Cursos</h1>
 
-            <div class="courses-container">
-                <button class="verTudo">Ver tudo</button>
-                <h2>Cursos de Web. Development</h2>
-                <div id="videos-container2" class="videos-container"></div>
-                <div class="scroll-buttons">
-                    <button
-                        class="scroll-button left"
-                        data-container="videos-container2"
-                    >
-                        <img
-                            class="setinha2"
-                            src="Src/setinha2.png"
-                            alt="Seta Esquerda"
-                        />
-                    </button>
-                    <button
-                        class="scroll-button right"
-                        data-container="videos-container2"
-                    >
-                        <img
-                            class="setinha"
-                            src="Src/setinha.png"
-                            alt="Seta Direita"
-                        />
-                    </button>
-                </div>
+        <div class="courses-container">
+            <button class="verTudo">Ver tudo</button>
+            <h2>Cursos mais assinados do mês</h2>
+            <div id="videos-container1" class="videos-container"></div>
+            <div class="scroll-buttons">
+                <button class="scroll-button left" data-container="videos-container1">
+                    <img class="setinha2" src="Src/setinha2.png" alt="Seta Esquerda" />
+                </button>
+                <button class="scroll-button right" data-container="videos-container1">
+                    <img class="setinha" src="Src/setinha.png" alt="Seta Direita" />
+                </button>
             </div>
+        </div>
 
-            <div class="courses-container">
-                <button class="verTudo">Ver tudo</button>
-                <h2>Cursos de Cybersegurança</h2>
-                <div id="videos-container3" class="videos-container"></div>
-                <div class="scroll-buttons">
-                    <button
-                        class="scroll-button left"
-                        data-container="videos-container3"
-                    >
-                        <img
-                            class="setinha2"
-                            src="Src/setinha2.png"
-                            alt="Seta Esquerda"
-                        />
-                    </button>
-                    <button
-                        class="scroll-button right"
-                        data-container="videos-container3"
-                    >
-                        <img
-                            class="setinha"
-                            src="Src/setinha.png"
-                            alt="Seta Direita"
-                        />
-                    </button>
-                </div>
+        <div class="courses-container">
+            <button class="verTudo">Ver tudo</button>
+            <h2>Cursos de Web. Development</h2>
+            <div id="videos-container2" class="videos-container"></div>
+            <div class="scroll-buttons">
+                <button class="scroll-button left" data-container="videos-container2">
+                    <img class="setinha2" src="Src/setinha2.png" alt="Seta Esquerda" />
+                </button>
+                <button class="scroll-button right" data-container="videos-container2">
+                    <img class="setinha" src="Src/setinha.png" alt="Seta Direita" />
+                </button>
             </div>
+        </div>
 
-            <div class="courses-container">
-                <button class="verTudo">Ver tudo</button>
-                <h2>Cursos de Banco de Dados</h2>
-                <div id="videos-container4" class="videos-container"></div>
-                <div class="scroll-buttons">
-                    <button
-                        class="scroll-button left"
-                        data-container="videos-container4"
-                    >
-                        <img
-                            class="setinha2"
-                            src="Src/setinha2.png"
-                            alt="Seta Esquerda"
-                        />
-                    </button>
-                    <button
-                        class="scroll-button right"
-                        data-container="videos-container4"
-                    >
-                        <img
-                            class="setinha"
-                            src="Src/setinha.png"
-                            alt="Seta Direita"
-                        />
-                    </button>
-                </div>
+        <div class="courses-container">
+            <button class="verTudo">Ver tudo</button>
+            <h2>Cursos de Cybersegurança</h2>
+            <div id="videos-container3" class="videos-container"></div>
+            <div class="scroll-buttons">
+                <button class="scroll-button left" data-container="videos-container3">
+                    <img class="setinha2" src="Src/setinha2.png" alt="Seta Esquerda" />
+                </button>
+                <button class="scroll-button right" data-container="videos-container3">
+                    <img class="setinha" src="Src/setinha.png" alt="Seta Direita" />
+                </button>
             </div>
-        </main>
+        </div>
 
-        <footer class="mobile">
-            <a href="../HomePage/Index.html" class="active"
-                ><i class="fa-solid fa-house"></i
-            ></a>
-            <a href="../SearchPage/Index.html"
-                ><i class="fa-solid fa-magnifying-glass"></i
-            ></a>
-            <a href="../NotificationPage/Index.html"
-                ><i class="fa-solid fa-bell"></i
-            ></a>
-            <a href="../ProfilePage/Index.html"
-                ><i class="fa-solid fa-user"></i
-            ></a>
-        </footer>
+        <div class="courses-container">
+            <button class="verTudo">Ver tudo</button>
+            <h2>Cursos de Banco de Dados</h2>
+            <div id="videos-container4" class="videos-container"></div>
+            <div class="scroll-buttons">
+                <button class="scroll-button left" data-container="videos-container4">
+                    <img class="setinha2" src="Src/setinha2.png" alt="Seta Esquerda" />
+                </button>
+                <button class="scroll-button right" data-container="videos-container4">
+                    <img class="setinha" src="Src/setinha.png" alt="Seta Direita" />
+                </button>
+            </div>
+        </div>
+    </main>
 
-        <footer class="desktop-footer desktop">
-            <div class="columns-container">
-                <div class="footer-column">
-                    <h3 class="footer-title">Páginas</h3>
-                    <a href="#">Home</a>
-                    <a href="../CourseList/index.html">Cursos</a>
-                    <a href="#">Comunidades</a>
-                </div>
-                <div class="footer-column">
-                    <h3 class="footer-title">Formações</h3>
-                    <a href="#">Cursos de Python</a>
-                    <a href="#">Cursos de Javascript</a>
-                    <a href="#">Cursos de Ciência de Dados</a>
-                    <a href="#">Inteligência Artificial</a>
-                </div>
-                <div class="footer-column">
-                    <h3 class="footer-title">Sobre</h3>
-                    <a href="#">Políticas de Privacidade</a>
-                    <a href="#">Direitos Autorais</a>
-                    <a href="#">Termos de Uso</a>
-                </div>
-                <div class="footer-column">
-                    <h3 class="footer-title">Suporte</h3>
-                    <a href="#">Central de Ajuda</a>
-                    <a href="#">Comunidade Discord</a>
-                </div>
+    <footer class="mobile">
+        <a href="../HomePage/Index.html" class="active"><i class="fa-solid fa-house"></i></a>
+        <a href="../SearchPage/Index.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="../NotificationPage/Index.html"><i class="fa-solid fa-bell"></i></a>
+        <a href="../ProfilePage/Index.html"><i class="fa-solid fa-user"></i></a>
+    </footer>
+
+    <footer class="desktop-footer desktop">
+        <div class="columns-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Páginas</h3>
+                <a href="#">Home</a>
+                <a href="../CourseList/index.html">Cursos</a>
+                <a href="#">Comunidades</a>
             </div>
-            <div class="icons">
-                <div class="brand">
-                    <img src="./Src/logo.svg" />
-                </div>
-                <div>
-                    <p>
-                        © 2024 DevPass. <br />
-                        Inc.
-                    </p>
-                </div>
-                <div class="socials-network">
-                    <a href="#">
-                        <img src="./Src/instagram-logo.svg" />
-                    </a>
-                    <a href="#">
-                        <img src="./Src/facebook-logo.svg" />
-                    </a>
-                    <a href="#">
-                        <img src="./Src/x-logo.svg" />
-                    </a>
-                </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Formações</h3>
+                <a href="#">Cursos de Python</a>
+                <a href="#">Cursos de Javascript</a>
+                <a href="#">Cursos de Ciência de Dados</a>
+                <a href="#">Inteligência Artificial</a>
             </div>
-        </footer>
-    </body>
+            <div class="footer-column">
+                <h3 class="footer-title">Sobre</h3>
+                <a href="#">Políticas de Privacidade</a>
+                <a href="#">Direitos Autorais</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Suporte</h3>
+                <a href="#">Central de Ajuda</a>
+                <a href="#">Comunidade Discord</a>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="brand">
+                <img src="./Src/logo.svg" />
+            </div>
+            <div>
+                <p>
+                    © 2024 DevPass. <br />
+                    Inc.
+                </p>
+            </div>
+            <div class="socials-network">
+                <a href="#">
+                    <img src="./Src/instagram-logo.svg" />
+                </a>
+                <a href="#">
+                    <img src="./Src/facebook-logo.svg" />
+                </a>
+                <a href="#">
+                    <img src="./Src/x-logo.svg" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
