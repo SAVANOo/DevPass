@@ -3,7 +3,7 @@ if (!accessToken) window.location.href = "../LoginPage/Index.html";
 
 document.addEventListener("DOMContentLoaded", () => {
     function fetchCourses() {
-        fetch(`${baseUrl}/cursos/cursos`, {
+        fetch(`${baseUrl}/cursos`, {
             method: "GET",
             headers: {
                 Accept: "application/json",
