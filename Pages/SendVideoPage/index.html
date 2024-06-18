@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="/config.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header class="desktop">
+            <a href="../HomePage/Index.html">
+                <img
+                    src="../Src/HeaderIcon/LogoDevPass.svg"
+                    class="LogoDevPass"
+                    alt="Logo DevPass"
+                />
+            </a>
+
+            <div class="navbar">
+                <div class="SearchBar">
+                    <i
+                        id="searchButton"
+                        class="fa-solid fa-magnifying-glass searchButton"
+                    ></i>
+                    <input
+                        id="desktopSearchInput"
+                        type="text"
+                        placeholder="Vagas, comunidades, serviços e mais..."
+                    />
+                </div>
+                <div class="Navigation">
+                    <a href="../CourseList/index.html" class="HeaderLinks"
+                        >Cursos</a
+                    >
+                    <a href="#" class="HeaderLinks">Comunidades</a>
+                    <a
+                        href="../ProfilePage/Index.html"
+                        class="HeaderLinks HeaderLogin"
+                        ><i class="fa-solid fa-user"></i> Login</a
+                    >
+                </div>
+            </div>
+        </header>
+        <div class="title-container">
+            <div class="icon">+</div>
+            <h1 class="title">Enviar videos</h1>
+        </div>
+        <div class="form-container">
+            <form
+                id="courseForm"
+                class="form"
+                method="post"
+                enctype="multipart/form-data"
+            >
+                <input
+                    type="text"
+                    name="titulo"
+                    placeholder="Título do curso"
+                    id="titulo-curso"
+                    class="form-input"
+                    required
+                />
+
+                <input
+                    type="text"
+                    name="descricao"
+                    placeholder="Descrição"
+                    id="descricao"
+                    class="form-input"
+                    required
+                />
+
+                <input
+                    type="text"
+                    name="professor"
+                    placeholder="Professor"
+                    id="professor"
+                    class="form-input"
+                    required
+                />
+                <div class="input-price">
+                    <input
+                        type="text"
+                        name="duracao"
+                        placeholder=" Duração"
+                        id="duracao"
+                        class="form-input"
+                        required
+                    />
+
+                    <input
+                        type="text"
+                        name="preco"
+                        placeholder="Preço"
+                        id="preco"
+                        class="form-input"
+                        required
+                    />
+                </div>
+
+                <input
+                    type="string"
+                    name="rating"
+                    placeholder="Rating"
+                    id="rating"
+                    class="form-input"
+                />
+
+                <input type="file" name="thumb" id="thumb" class="inputfile" />
+                <label for="thumb" class="file-label">Imagem da vídeo</label>
+
+                <div id="conteudoContainer" class="content-container">
+                    <h3>Conteúdo:</h3>
+                    <div class="conteudo">
+                        <input
+                            type="text"
+                            class="conteudoTitulo form-input"
+                            placeholder="Título da aula"
+                            name="conteudoTitulo[]"
+                            required
+                        />
+                        <input
+                            type="text"
+                            class="conteudoUrl form-input"
+                            placeholder="URL"
+                            name="conteudoUrl[]"
+                            required
+                        />
+                    </div>
+                </div>
+                <button type="button" onclick="addConteudo()">
+                    Adicionar Conteúdo
+                </button>
+
+                <div class="buttons-container">
+                    <button class="clear" type="reset">Apagar Tudo</button>
+                    <button class="send" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <footer class="desktop-footer desktop">
+            <div class="columns-container">
+                <div class="footer-column">
+                    <h3 class="footer-title">Páginas</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Cursos</a>
+                    <a href="#">Comunidades</a>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Formações</h3>
+                    <a href="#">Cursos de Python</a>
+                    <a href="#">Cursos de Javascript</a>
+                    <a href="#">Cursos de Ciência de Dados</a>
+                    <a href="#">Inteligência Artificial</a>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sobre</h3>
+                    <a href="#">Políticas de Privacidade</a>
+                    <a href="#">Direitos Autorais</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Suporte</h3>
+                    <a href="#">Central de Ajuda</a>
+                    <a href="#">Comunidade Discord</a>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="brand">
+                    <img src="./Src/logo.svg" />
+                </div>
+                <div>
+                    <p>
+                        © 2024 DevPass. <br />
+                        Inc.
+                    </p>
+                </div>
+                <div class="socials-network">
+                    <a href="#">
+                        <img src="./Src/instagram-logo.svg" />
+                    </a>
+                    <a href="#">
+                        <img src="./Src/facebook-logo.svg" />
+                    </a>
+                    <a href="#">
+                        <img src="./Src/x-logo.svg" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
