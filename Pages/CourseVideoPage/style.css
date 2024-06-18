@@ -183,11 +183,11 @@ header .navbar {
     line-height: 25px;
 }
 
-.Course-content {
+.CourseContent {
     margin: 20px 10vw;
 }
 
-.Course-content .Frame {
+.CourseContent .Frame {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -205,7 +205,7 @@ header .navbar {
     box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
 }
 
-.Frame .Frame-header{
+.Frame .FrameHeader{
     width: 100%;
     padding: 25px 70px;
     display: flex;
@@ -223,7 +223,7 @@ header .navbar {
     font-size: 25px;
 }
 
-.Content-info{
+.ContentInfo{
     padding: 25px 70px;
     width: 100%;
     background-color: var(--gray-hover-dark);
@@ -231,17 +231,17 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-.Content-info:hover{
+.ContentInfo:hover{
     background-color: var(--gray-hover-dark-2);
     opacity: 0.8;
 }
 
-.Content-info ul {
+.ContentInfo ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.Content-info ul li {
+.ContentInfo ul li {
     background: transparent;
     margin: 5px 0;
     padding: 5px;

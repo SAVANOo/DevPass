@@ -14,43 +14,43 @@
         justify-content: space-between;
     }
 
-    .Header-course .BackgroundImage1{
+    .HeaderCourse .BackgroundImage1{
         height: 90vw;
     }
 
-    .Header-course .Information-key {
+    .HeaderCourse .InformationKey {
         margin-top: 20px;
         text-align: center;
     }
 
-    .Header-course .Content {
+    .HeaderCourse .Content {
         height: 100%;
         padding: 0 10vw;
         flex-direction: column;
     }
 
-    .Header-course .Course-card {
+    .HeaderCourse .CourseCard {
         width: 50vw;
     }
 
-    .Course-card img {
+    .CourseCard img {
         width: 100%;
         height: 50%;
     }
 
-    .Course-card i {
+    .CourseCard i {
         top: calc(30%);
     }
 
-    .Course-card .Value {
+    .CourseCard .Value {
         margin: 20px 0;
     }
 
-    .Course-card .Value #value {
+    .CourseCard .Value #value {
         font-size: 40px;
     }
 
-    .Course-card #buy-button {
+    .CourseCard #buyButton {
         margin-bottom: 20px;
     }
 
@@ -121,15 +121,15 @@
         min-width: 334px;
     }
 
-    .Header-course .BackgroundImage1{
+    .HeaderCourse .BackgroundImage1{
         height: 130vh;
     }
 
-    .Course-content .Frame-header{
+    .CourseContent .FrameHeader{
         padding: 25px 35px;
     }
 
-    .Content-info{
+    .ContentInfo{
         padding: 25px 30px;
     }
     .footer {

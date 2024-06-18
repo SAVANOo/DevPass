@@ -155,7 +155,7 @@ header .navbar {
 }
 
 
-.Header-course .Content {
+.HeaderCourse .Content {
     position: relative;
     /* Adicionando uma posição relativa para que o conteúdo dentro possa estar acima */
     display: flex;
@@ -165,7 +165,7 @@ header .navbar {
     height: 70vh;
 }
 
-.Header-course .BackgroundImage1{
+.HeaderCourse .BackgroundImage1{
     position: absolute;
     object-fit: cover;   
     filter: blur(5.1px);
@@ -177,26 +177,26 @@ header .navbar {
     height: 80vh;
 }
 
-.Content .Information-key {
+.Content .InformationKey {
     position: relative;
     min-width: 364px;
 }
 
-.Information-key .Title{
+.InformationKey .Title{
     text-shadow: var(--white) 3px 3px 10px;;
 }
 
-.Information-key .Sub-title{
+.InformationKey .Sub-title{
     font-weight: 500;
     text-shadow: var(--gray-hover-dark) 3px 3px 10px;
 }
 
-.Information-key .Autor{
+.InformationKey .Autor{
     font-weight: 400;
     text-shadow: var(--gray-hover-dark) 3px 3px 10px;
 }
 
-.Information-key .Sub-title,
+.InformationKey .Sub-title,
 .Rating {
     margin-top: 8px;
     
@@ -210,12 +210,12 @@ header .navbar {
     color: var(--gray-hover-dark);
 }
 
-.Information-key .Autor,
+.InformationKey .Autor,
 .Language {
     margin-top: 16px;
 }
 
-.Content .Course-card {
+.Content .CourseCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,17 +232,17 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-.Course-card:hover {
+.CourseCard:hover {
     box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
 }
 
-.Course-card img {
+.CourseCard img {
     border-radius: 40px 40px 0 0;
     width: 100%;
     height: 50%;
 }
 
-.Course-card i {
+.CourseCard i {
     font-size: 80px;
     color: var(--white);
     cursor: pointer;
@@ -252,11 +252,11 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-.Course-card i:hover {
+.CourseCard i:hover {
     color: var(--gray-hover-dark);
 }
 
-.Course-card .Value {
+.CourseCard .Value {
     flex-grow: 3;
     display: flex;
     align-items: center;
@@ -275,7 +275,7 @@ header .navbar {
     text-decoration: line-through;
 }
 
-.Course-card .Button-content{
+.CourseCard .ButtonContent{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,7 +283,7 @@ header .navbar {
     flex-grow: 2;
 }
 
-.Course-card #buy-button {
+.CourseCard #buyButton {
     border-radius: 40px;
     width: 90%;
     height: 66px;
@@ -297,7 +297,7 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-#buy-button:hover {
+#buyButton:hover {
     background-color: var(--green-hover-dark);
 }
 
@@ -310,11 +310,11 @@ header .navbar {
     line-height: 25px;
 }
 
-.Course-content {
+.CourseContent {
     margin: 20px 10vw;
 }
 
-.Course-content .Frame {
+.CourseContent .Frame {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -332,7 +332,7 @@ header .navbar {
     box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
 }
 
-.Frame .Frame-header{
+.Frame .FrameHeader{
     width: 100%;
     padding: 25px 70px;
     display: flex;
@@ -350,7 +350,7 @@ header .navbar {
     font-size: 25px;
 }
 
-.Content-info{
+.ContentInfo{
     padding: 25px 70px;
     width: 100%;
     background-color: var(--gray-hover-dark);
@@ -358,17 +358,17 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-.Content-info:hover{
+.ContentInfo:hover{
     background-color: var(--gray-hover-dark-2);
     opacity: 0.8;
 }
 
-.Content-info ul {
+.ContentInfo ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.Content-info ul li {
+.ContentInfo ul li {
     background: transparent;
     margin: 5px 0;
     padding: 5px;

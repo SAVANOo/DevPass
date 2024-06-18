@@ -1,5 +1,5 @@
 export function buildCardCourse(courseList, numItems) {
-    console.log(courseList)
+
     //Adiciona a quantidade de items escolhida para mostrar na tela
     for (let i = 0; i < numItems; i++) {
         const courseListContainer = document.getElementById("courseList");
@@ -10,15 +10,13 @@ export function buildCardCourse(courseList, numItems) {
 
         courseItem.addEventListener('click', () => {
             let id = courseItem.id.replace("course-", "");
-            console.log(id)
             window.location.href = `../CoursePage/Index.html?id=${id}`;
         })
 
         const courseImage = document.createElement("img");
         courseImage.classList.add("CursoImage")
         courseImage.src = courseList[i].thumb; 
-        console.log(courseList[i].thumb)
-
+    
         const courseTitle = document.createElement("h3");
         courseTitle.classList.add("CursoTitle");
         courseTitle.textContent = courseList[i].titulo;

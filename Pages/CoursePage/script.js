@@ -6,7 +6,6 @@ if (accessToken) {
 
     const urlParams = new URLSearchParams(window.location.search);
     const idParameter = urlParams.get('id');
-    console.log(idParameter); // 42
 
     /* Requisição para receber coleção de cursos*/
     fetch(`${baseUrl}/cursos/cursos`, {
@@ -24,7 +23,6 @@ if (accessToken) {
             }
         })
         .then(data => {
-            console.log(data);
             data.cursos.forEach(course => {
                 if (course.id == idParameter)
                     buildCoursePage(course);
@@ -36,7 +34,7 @@ if (accessToken) {
         })
         .catch(error => {
             console.error('Erro na requisição:', error);
-            /* window.location.href = "../LoginPage/Index.html"; */
+            window.location.href = "../LoginPage/Index.html";
         });
 
 
@@ -45,20 +43,19 @@ if (accessToken) {
 }
 
 function buildCoursePage(course) {
-    console.log(course)
-    const headerCourse = document.querySelector(".Header-course");
+    const headerCourse = document.getElementById("headerCourse");
     headerCourse.innerHTML = '';
 
     const headerContent = document.createElement("div");
     headerContent.classList.add("Content");
 
     const informationKeyContent = document.createElement("div");
-    informationKeyContent.classList.add("Information-key");
+    informationKeyContent.classList.add("InformationKey");
 
     /* Definição de título, sub-título, autor, avaliação e idioma */
     const courseImage = document.createElement("img");
     courseImage.classList.add("BackgroundImage1");
-    courseImage.src = course.thumb; //fixo no momento
+    courseImage.src = course.thumb; 
 
     const courseTitle = document.createElement('h1');
     courseTitle.classList.add("Title");
@@ -77,7 +74,7 @@ function buildCoursePage(course) {
 
     const valueRating = document.createElement("span");
     valueRating.classList.add("yellow");
-    valueRating.textContent = `${course.rating},0 `; //fixo no momento
+    valueRating.textContent = `${course.rating},0 `; 
     courseRating.appendChild(valueRating);
 
     let arrayStar = ['', '', '', '', '']
@@ -102,7 +99,7 @@ function buildCoursePage(course) {
 
     /* Criação do card do curso */
     const courseCard = document.createElement("div");
-    courseCard.classList.add("Course-card");
+    courseCard.classList.add("CourseCard");
 
     const cardImage = document.createElement("img");
     cardImage.src = course.thumb;
@@ -115,10 +112,10 @@ function buildCoursePage(course) {
     coursePriceContent.innerHTML = `<div id="value">R$ ${course.preco}</div>`
 
     const cardButtonContent = document.createElement("div");
-    cardButtonContent.classList.add("Button-content");
+    cardButtonContent.classList.add("ButtonContent");
 
     const cardButton = document.createElement("button");
-    cardButton.id = "buy-button";
+    cardButton.id = "buyButton";
     cardButton.textContent = "Comprar Curso"
     cardButton.addEventListener("click", () => { window.location.href = `../CourseVideoPage/index.html?id=${course.id}` })
 
@@ -141,7 +138,7 @@ function buildCoursePage(course) {
 
     /* Construção da descrição */
 
-    const descriptionContent = document.querySelector(".Description");
+    const descriptionContent = document.getElementById("Description");
 
     const descriptionTitle = document.createElement("h2");
     descriptionTitle.textContent = "Descrição";
@@ -151,7 +148,7 @@ function buildCoursePage(course) {
 
     /* Construção do conteúdo */
 
-    const courseContent = document.querySelector(".Course-content");
+    const courseContent = document.getElementById("courseContent");
 
     const contentTitle = document.createElement("h2");
     contentTitle.textContent = "Conteudo";
@@ -160,22 +157,19 @@ function buildCoursePage(course) {
     contentFrame.classList.add("Frame");
 
     const frameHeader = document.createElement("div");
-    frameHeader.classList.add("Frame-header");
+    frameHeader.classList.add("FrameHeader");
 
     const frameChapter = document.createElement("div");
     frameChapter.classList.add("Chapter");
     frameChapter.innerHTML = `<i class="fa-solid fa-circle-arrow-down"></i><span>INTRODUÇÃO</span>`;
 
     const contentInfo = document.createElement("div");
-    contentInfo.classList.add("Content-info");
+    contentInfo.classList.add("ContentInfo");
 
     const listContent = document.createElement("ul");
 
-    //forma dinâmica, esperando o back ser implementado
-    /* course.conteudo.split(".").forEach((element) => {
-        listContent.innerHTML += `<li>${element}</li>`;
-        }) */
-
+    
+    //todo: add dynamic form
     listContent.innerHTML += `<li>Aula 1: Introdução ao curso</li>
        <li>Aula 2: Objetivos do curso</li>
        <li>Aula 3: Estrutura do curso</li>`
@@ -195,7 +189,6 @@ function buildCoursePage(course) {
 }
 
 function toggleContent(element) {
-    console.log(element)
     if (element.style.display === "flex") {
         element.style.display = "none";
     } else {
