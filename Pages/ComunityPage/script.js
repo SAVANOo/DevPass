@@ -14,7 +14,7 @@ function buildComunityItem(mapData, bgColor) {
     comunidadeCardItem.classList.add(`${bgColor}-background`);
     comunidadeCardItem.innerHTML = `
                         <div class="card-content">
-                            <img class="icon-card" src="../../Pages/ComunityPage/Src/Comunidades/Imagens/iconcomunidade.png">
+                            <img class="icon-card" src="Src/Comunidades/Imagens/iconcomunidade.png">
                             <h1 class="card-title">${mapData.nome}</h1>
                             <p class="card-text">${mapData.tema}</p>
                             <button class="saiba-mais">Saiba Mais</button>
@@ -23,13 +23,13 @@ function buildComunityItem(mapData, bgColor) {
                     `
 
     const buttonSaibaMais = comunidadeCardItem.children[0].children[3];
-    
+
     buttonSaibaMais.addEventListener("click", () => {
         console.log("oi")
         let id = comunidadeCardItem.id.replace("community-", "");
         window.location.href = `./index.html?id=${id}`
     });
-                        
+
     console.log(buttonSaibaMais);
     comunidadeCardsContainer.appendChild(comunidadeCardItem);
 }
@@ -43,7 +43,7 @@ function buildComunityItemBar(mapData, bgColor) {
     comunidadeBarItem.innerHTML = `
                      <div class="info-discussion">
                         <div class="acess-discussion">
-                            <img class="arrow-bar" src="../../Pages/ComunityPage/Src/Comunidades/Imagens/arrowcom.png">
+                            <img class="arrow-bar" src="Src/Comunidades/Imagens/arrowcom.png">
                             <p class="theme-discussion">${mapData.tema}</p>
                         </div>
                         <div class="participants">
@@ -77,7 +77,7 @@ fetch(`${baseUrl}/comunidades`, {
         for (i = 0; i < 4; i++) {
             buildComunityItem(data[i], colors[i]);
             buildComunityItemBar(data[i], colors[i]);
-   
+
 
         }
 
@@ -96,38 +96,38 @@ fetch(`${baseUrl}/comunidades`, {
 
 
 
-    function buildComunityBanner(mapData){
-        const comunidadeBannerContainer = document.querySelector(".banner-comunity-container");
-        const comunidadeBannerItem = document.createElement('div');
-        comunidadeBannerItem.classList.add('banner');
-        comunidadeBannerItem.innerHTML = `
+function buildComunityBanner(mapData) {
+    const comunidadeBannerContainer = document.querySelector(".banner-comunity-container");
+    const comunidadeBannerItem = document.createElement('div');
+    comunidadeBannerItem.classList.add('banner');
+    comunidadeBannerItem.innerHTML = `
       
         `
-        comunidadeBannerContainer.appendChild(comunidadeBannerItem);
+    comunidadeBannerContainer.appendChild(comunidadeBannerItem);
+}
+
+fetch(`${baseUrl}/comunidades/${idParameter}`, {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer  ${accessToken}`,
     }
+}
+)
 
-    fetch(`${baseUrl}/comunidades/${idParameter}`, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Authorization': `Bearer  ${accessToken}`,
-    }
- }
-        ) 
-
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector('.name-comunity').textContent = data.nome;
-            document.querySelector('.description-comunity').textContent = data.tema;
-            document.querySelector('.criation-comunity').textContent = `Criado por ${data.creator}`;
-            document.querySelector('.language-comunity').textContent = data.language;
+    .then(response => response.json())
+    .then(data => {
+        document.querySelector('.name-comunity').textContent = data.nome;
+        document.querySelector('.description-comunity').textContent = data.tema;
+        document.querySelector('.criation-comunity').textContent = `Criado por ${data.creator}`;
+        document.querySelector('.language-comunity').textContent = data.language;
 
 
-            buildComunityBanner(data);
-        })
-        .catch(error => {
-            console.error('Erro ao buscar dados da comnunidade', error);
-        });
+        buildComunityBanner(data);
+    })
+    .catch(error => {
+        console.error('Erro ao buscar dados da comnunidade', error);
+    });
 
 
-    
+
