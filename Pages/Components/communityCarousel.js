@@ -1,5 +1,5 @@
 export function buildCardCommunity(communityList, numItems) {
-
+    console.log(communityList)
     //Adiciona a quantidade de items escolhida para mostrar na tela
     for (let i = 0; i < numItems; i++) {
         const communityListContainer = document.getElementById("communityList");
@@ -35,6 +35,11 @@ export function buildCardCommunity(communityList, numItems) {
         const communityButton = document.createElement("button");
         communityButton.setAttribute("class", "Community Button2");
         communityButton.textContent = "Saiba Mais";
+
+        communityButton.addEventListener('click', () => {
+            let id = communityItem.id.replace("community-", "");
+            window.location.href = `../ComunityPage/Index.html?id=${id}`;
+        })
 
         communityItem.appendChild(communityImage);
         communityItem.appendChild(communityTitle);
