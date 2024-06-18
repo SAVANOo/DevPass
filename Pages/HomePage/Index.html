@@ -11,7 +11,7 @@
 		crossorigin="anonymous"
 		></script>
 		<script src="/config.js"></script>
-		<script src="script.js" defer></script>
+		<script src="script.js" type="module" defer></script>
 		<link rel="icon" type="image/x-icon" href="../Src/favicon.svg" />
 
 		<title>&lt;DevPass&gt;</title>
@@ -111,7 +111,7 @@
 				/>
 			</div>
 
-			<div class="Container Cursos" id="Cursos">
+			<div class="Container" id="Course">
 				<div class="ContainerTop">
 					<h2 class="ContainerTitle">Cursos</h2>
 
@@ -120,11 +120,11 @@
 					</a>
 				</div>
 
-				<div class="Cursos-Carousel">
-					<button class="CarouselBtn Prev">❮</button>
-					<div class="CursosItems">
+				<div class="Carousel">
+					<button class="CarouselBtn Prev" id="btnPrevCourse">❮</button>
+					<div class="CourseList" id="courseList">
 					</div>
-					<button class="CarouselBtn Next">❯</button>
+					<button class="CarouselBtn Next"  id="btnNextCourse">❯</button>
 				</div>
 			</div>
 
@@ -140,7 +140,7 @@
 				<img class="Banner2Image" src="./Src/banner-2/backgound.png" alt="" />
 			</div>
 
-			<div class="Container Communities" id="Communities">
+			<div class="Container" id="Communities">
 				<div class="ContainerTop">
 					<h2 class="ContainerTitle">Comunidades</h2>
 
@@ -149,12 +149,12 @@
 					</a>
 				</div>
 
-				<div class="CommunityCarousel">
-					<button class="CarouselBtn Prev Communities">❮</button>		
-					<div class="CommunityItems">
+				<div class="Carousel">
+					<button class="CarouselBtn Prev Communities" id="btnPrevCommunity">❮</button>		
+					<div class="CommunityList" id="communityList" >
 
 					</div>
-					<button class="CarouselBtn Next Communities">❯</button>
+					<button class="CarouselBtn Next Communities" id="btnNextCommunity">❯</button>
 				</div>
 			</div>
 
