@@ -14,7 +14,7 @@ function buildComunityItem(mapData, bgColor) {
     comunidadeCardItem.classList.add(`${bgColor}-background`);
     comunidadeCardItem.innerHTML = `
                         <div class="card-content">
-                            <img class="icon-card" src="/Pages/ComunityPage/Src/Comunidades/Imagens/iconcomunidade.png">
+                            <img class="icon-card" src="../../Pages/ComunityPage/Src/Comunidades/Imagens/iconcomunidade.png">
                             <h1 class="card-title">${mapData.nome}</h1>
                             <p class="card-text">${mapData.tema}</p>
                             <button class="saiba-mais">Saiba Mais</button>
@@ -43,7 +43,7 @@ function buildComunityItemBar(mapData, bgColor) {
     comunidadeBarItem.innerHTML = `
                      <div class="info-discussion">
                         <div class="acess-discussion">
-                            <img class="arrow-bar" src="/Pages/ComunityPage/Src/Comunidades/Imagens/arrowcom.png">
+                            <img class="arrow-bar" src="../../Pages/ComunityPage/Src/Comunidades/Imagens/arrowcom.png">
                             <p class="theme-discussion">${mapData.tema}</p>
                         </div>
                         <div class="participants">
