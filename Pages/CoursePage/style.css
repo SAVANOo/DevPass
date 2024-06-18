@@ -62,7 +62,7 @@ header {
     align-items: center;
     max-width: 100vw;
     justify-content: space-between;
-    padding: 0 157px;
+    padding: 0 10vw;
 }
 
 .LogoDevPass {
@@ -155,74 +155,67 @@ header .navbar {
 }
 
 
-.Header-course .Content {
+.HeaderCourse .Content {
     position: relative;
     /* Adicionando uma posição relativa para que o conteúdo dentro possa estar acima */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 157px;
+    padding: 0 10vw;
     height: 70vh;
 }
 
-.Header-course .Content::before {
-    content: '';
+.HeaderCourse .BackgroundImage1{
     position: absolute;
-    /* Posicionamento absoluto em relação ao pai (.content) */
-    background-image: url(./Src/headerCourse/background\ curso.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px;
+    object-fit: cover;   
     filter: blur(5.1px);
-    /* O mesmo blur aplicado à imagem de fundo */
-    z-index: -1;
+    opacity: 0.9;
+    z-index: -2;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80vh;
 }
 
-.Header-course .Content::after {
-    content: '';
-    position: absolute;
-    /* Posicionamento absoluto em relação ao pai (.content) */
-    background-image: url(./Src/headerCourse/sombra.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -100px;
-    filter: blur(5.1px);
-    /* O mesmo blur aplicado à imagem de fundo */
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: 100%;
-}
-
-.Content .Information-key {
+.Content .InformationKey {
     position: relative;
     min-width: 364px;
 }
 
-.Information-key .Sub-title,
-.Reviews {
-    margin-top: 8px;
+.InformationKey .Title{
+    text-shadow: var(--white) 3px 3px 10px;;
 }
 
-.Reviews .yellow {
+.InformationKey .Sub-title{
+    font-weight: 500;
+    text-shadow: var(--gray-hover-dark) 3px 3px 10px;
+}
+
+.InformationKey .Autor{
+    font-weight: 400;
+    text-shadow: var(--gray-hover-dark) 3px 3px 10px;
+}
+
+.InformationKey .Sub-title,
+.Rating {
+    margin-top: 8px;
+    
+}
+
+.Rating .yellow {
     color: var(--yellow-main);
 }
 
-.Reviews .gray {
+.Rating .gray {
     color: var(--gray-hover-dark);
 }
 
-.Information-key .Autor,
+.InformationKey .Autor,
 .Language {
     margin-top: 16px;
 }
 
-.Content .Course-card {
+.Content .CourseCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,24 +223,26 @@ header .navbar {
     top: 48px;
 
     min-width: 330px;
-    width: 70%;
+    width: 40%;
     height: 100%;
     padding: 2px;
     border: 2px solid #000;
+    border-radius: 40px;
     background-color: var(--white);
     transition: 0.3s ease;
 }
 
-.Course-card:hover {
+.CourseCard:hover {
     box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
 }
 
-.Course-card img {
+.CourseCard img {
+    border-radius: 40px 40px 0 0;
     width: 100%;
     height: 50%;
 }
 
-.Course-card i {
+.CourseCard i {
     font-size: 80px;
     color: var(--white);
     cursor: pointer;
@@ -257,11 +252,11 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-.Course-card i:hover {
+.CourseCard i:hover {
     color: var(--gray-hover-dark);
 }
 
-.Course-card .Value {
+.CourseCard .Value {
     flex-grow: 3;
     display: flex;
     align-items: center;
@@ -280,7 +275,7 @@ header .navbar {
     text-decoration: line-through;
 }
 
-.Course-card .Button-content{
+.CourseCard .ButtonContent{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -288,7 +283,8 @@ header .navbar {
     flex-grow: 2;
 }
 
-.Course-card #buy-button {
+.CourseCard #buyButton {
+    border-radius: 40px;
     width: 90%;
     height: 66px;
     font-size: 25px;
@@ -301,15 +297,12 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-
-
-
-#buy-button:hover {
-    background-color: var(--orange-hover-dark);
+#buyButton:hover {
+    background-color: var(--green-hover-dark);
 }
 
 .Description {
-    margin: 90px 157px 40px 157px;
+    margin: 90px 10vw 40px 10vw;
 }
 
 .Description p {
@@ -317,14 +310,14 @@ header .navbar {
     line-height: 25px;
 }
 
-.Course-content {
-    margin: 20px 157px;
+.CourseContent {
+    margin: 20px 10vw;
 }
 
-.Course-content .Frame {
+.CourseContent .Frame {
     margin-top: 40px;
-    padding: 25px 70px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: var(--gray-hover-dark-2);
@@ -336,6 +329,15 @@ header .navbar {
 
 .Frame:hover {
     background-color: var(--gray-hover-dark);
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.Frame .FrameHeader{
+    width: 100%;
+    padding: 25px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Frame .Chapter {
@@ -348,10 +350,46 @@ header .navbar {
     font-size: 25px;
 }
 
+.ContentInfo{
+    padding: 25px 70px;
+    width: 100%;
+    background-color: var(--gray-hover-dark);
+    border-radius: 0 0 10px 10px;
+    transition: 0.3s ease;
+}
+
+.ContentInfo:hover{
+    background-color: var(--gray-hover-dark-2);
+    opacity: 0.8;
+}
+
+.ContentInfo ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ContentInfo ul li {
+    background: transparent;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
 .Container {
     margin-top: 45px;
     max-width: 1600px;
-    padding: 0 157px;
+    padding: 0 10vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.Container {
+    margin-top: 45px;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 10vw;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -365,35 +403,91 @@ header .navbar {
     align-items: center;
 }
 
-
-.CursosItems {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+.Button {
+    color: var(--white);
+    background-color: var(--blue-main);
+    color: #ffffff;
+    padding: 5px 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    min-width: 130px;
 }
 
-.CursoItem {
+.Button:hover {
+    text-decoration: none;
+    background-color: var(--blue-hover-bright);
+}
+
+.Carousel{
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.CourseList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+    z-index: 3;
+}
+
+
+.CarouselBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Prev {
+    left: 0;
+}
+
+.Next {
+    right: 0;
+}
+
+.CourseItem {
+    padding: 10px;
+    border-radius: 20px;
     margin: 20px 0;
     min-width: 240px;
     max-width: 270px;
     width: 20%;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 
-.CursoItem .CursoImage {
+.CourseItem:hover{
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.CourseItem .CursoImage {
+    border-radius: 10px;
     max-width: 270px;
     width: 100%;
 }
 
-.CursoItem .CursoTitle {
+.CourseItem .CursoTitle {
     font-size: 16px;
     line-height: 20px;
     margin-top: 10px;
 }
 
-.CursoItem .CursoAuthor {
+.CourseItem .CursoAuthor {
     color: var(--gray-hover-dark);
     font-size: 16px;
     line-height: 20px;
@@ -408,7 +502,6 @@ header .navbar {
     color: var(--gray-hover-dark);
 }
 
-
 footer {
     height: 73px;
     position: relative;
@@ -417,7 +510,7 @@ footer {
     justify-content: space-between;
     height: 321px;
     background-color: #0500ff;
-    padding: 31px 157px;
+    padding: 31px 10vw;
     width: 100%;
     box-shadow: 0px -4px 6px 0px #00000040;
 }

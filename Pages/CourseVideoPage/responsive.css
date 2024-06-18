@@ -14,42 +14,57 @@
         justify-content: space-between;
     }
 
-    .Content-screen {
-        padding: 0px 10vw;
+    .Header-course .BackgroundImage1{
+        height: 90vw;
     }
-    
+
+    .Header-course .Information-key {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .Header-course .Content {
+        height: 100%;
+        padding: 0 10vw;
+        flex-direction: column;
+    }
+
+    .Header-course .Course-card {
+        width: 50vw;
+    }
+
+    .Course-card img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .Course-card i {
+        top: calc(30%);
+    }
+
+    .Course-card .Value {
+        margin: 20px 0;
+    }
+
+    .Course-card .Value #value {
+        font-size: 40px;
+    }
+
+    .Course-card #buy-button {
+        margin-bottom: 20px;
+    }
+
     .Description {
-        margin: 50px 10vw 20px 10vw;
+        margin: 80px 10vw 20px 10vw;
     }
 
-    .Course-content {
-        margin: 20px 10vw;
-    }
-
-    .Course-content .Frame{
-        padding: 20px 50px;
-    }
 
     .Container {
         margin: 20px 0;
         padding: 20px 10vw;
     }
 
-    .CursosItems {
-        justify-content: center;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .CursoItem img {
-        width: 100%;
-    }
-
-    .CursoItem {
-        width: 200px;
-    }
-
-    .footer{
+    .footer {
         padding: 30px 10vw;
         height: 350px;
     }
@@ -72,7 +87,7 @@
         justify-content: space-between;
     }
 
-    .icons p{
+    .icons p {
         font-size: 15px;
     }
 
@@ -84,7 +99,7 @@
         margin: 0;
     }
 
-    .icons .socials-network img{
+    .icons .socials-network img {
         width: 40px;
     }
 }
@@ -92,54 +107,40 @@
 
 @media screen and (max-width: 630px) {
 
-    
     header {
-
         height: 120px;
     }
 
     header .navbar {
+        min-width: 334px;
         flex-direction: column-reverse;
         gap: 5px;
     }
 
-    .Content-screen {
-        padding: 0px;
+    .SearchBar {
+        min-width: 334px;
     }
 
-    .Course-content .Frame{
-        padding: 15px 20px;
-        flex-wrap: wrap;
-        gap: 10px;
+    .Header-course .BackgroundImage1{
+        height: 130vh;
     }
 
-    .CursosItems {
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
+    
+    .CourseContent .FrameHeader{
+        padding: 25px 35px;
     }
 
-    .CursoItem img {
-        width: 100%;
+    .ContentInfo{
+        padding: 25px 30px;
     }
 
-    .CursoItem {
-        min-width: 140px;
-        width: 25%;
-    }
-
-
-    .footer{
+    .footer {
         gap: 10px;
         height: 100%;
     }
 
-    .footer .columns-container{
+    .footer .columns-container {
         flex-wrap: wrap;
-    }
-
-    .SearchBar {
-        width: 100%;
     }
 
     .columns-container .footer-column .footer-title {
@@ -149,8 +150,8 @@
     .footer-column a {
         font-size: 11px;
     }
-    
-    .icons p{
+
+    .icons p {
         font-size: 11px;
     }
 
@@ -158,7 +159,7 @@
         width: 100px;
     }
 
-    .icons .socials-network img{
+    .icons .socials-network img {
         width: 30px;
     }
 }
