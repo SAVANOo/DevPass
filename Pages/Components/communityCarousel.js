@@ -38,7 +38,7 @@ export function buildCardCommunity(communityList, numItems) {
 
         communityButton.addEventListener('click', () => {
             let id = communityItem.id.replace("community-", "");
-            window.location.href = `../ComunityPage/Index.html?id=${id}`;
+            window.location.href = `../ComunityPage/index.html?id=${id}`;
         })
 
         communityItem.appendChild(communityImage);
