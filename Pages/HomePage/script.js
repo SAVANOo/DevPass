@@ -47,6 +47,7 @@ if (accessToken) {
             }
         })
         .then(data => { 
+            console.log(data[0])
             let qntItems = 10 //Quantidade de comunidades na tela
             communityCarousel.buildCardCommunity(data, qntItems);
             communityCarousel.enableCommunityCarousel();
