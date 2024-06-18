@@ -1,57 +1,59 @@
-import { baseUrl } from "../../config.js";
 const accessToken = localStorage.getItem("token");
 if (!accessToken) window.location.href = "../LoginPage/Index.html";
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Define the API endpoint
-
-    // Func. de dar fetch na API
     function fetchCourses() {
         fetch(`${baseUrl}/cursos/cursos`, {
             method: "GET",
             headers: {
-                Accept: '"application/json"',
+                Accept: "application/json",
                 Authorization: `Bearer ${accessToken}`,
             },
         })
             .then((response) => {
                 if (response.ok) {
-                    console.log("Response:  " + response);
                     return response.json();
                 } else {
                     throw new Error("Network response was not ok");
                 }
             })
             .then((data) => {
-                console.log("Data: ", data.cursos);
+                console.log(data.cursos);
                 displayCourses(data.cursos);
+                displayCourses2(data.cursos);
+                displayCourses3(data.cursos);
+                displayCourses4(data.cursos);
             })
             .catch((error) => {
-                console.error(
-                    "There was a problem with the fetch operation:",
-                    error
-                );
+                throw new Error(error.message);
             });
     }
 
-    // Manipulação DOM
-    function displayCourses(courses) {
-        const videosContainer = document.querySelector(".videos-container");
+    function renderStars(rating) {
+        let stars = "";
+        for (let i = 0; i < rating; i++) {
+            stars += "★"; // Estrelinha cheia
+        }
+        for (let i = rating; i < 5; i++) {
+            stars += "☆"; // Estrelinha vazia
+        }
+        return stars;
+    }
 
-        // Tirar o que tem no HTML
+    function displayCourses(courseList) {
+        const videosContainer = document.querySelector("#videos-container1");
+
         videosContainer.innerHTML = "";
 
-        courses.forEach((course) => {
-            // Criar 1 por 1
+        courseList.map((course) => {
             const courseItem = document.createElement("div");
             courseItem.classList.add("course-item");
 
-            /* const courseImg = document.createElement('img');
-            courseImg.src = course.thumbnail || 'Src/thumbnail.jpg';
-            courseImg.alt = course.title; // Ainda não foi implementado as thumbs na API */
+            const courseInfoContainer = document.createElement("div");
+            courseInfoContainer.classList.add("course-info");
 
-            const courseInfo = document.createElement("div");
-            courseInfo.classList.add("course-info");
+            const courseThumb = document.createElement("img");
+            courseThumb.src = course.thumb;
 
             const courseTitle = document.createElement("h3");
             courseTitle.textContent = course.titulo;
@@ -60,30 +62,158 @@ document.addEventListener("DOMContentLoaded", () => {
             courseInstructor.textContent = course.professor;
 
             const courseRating = document.createElement("p");
-            courseRating.textContent = `${course.rating} ★★★★☆`; // Rating fixa; ainda não tem implementação de rating dinâmica na API
+            courseRating.innerHTML = renderStars(course.rating);
 
             const coursePrice = document.createElement("p");
             coursePrice.textContent = `R$ ${course.preco.toFixed(2)}`;
 
-            // Append elements to course info
-            courseInfo.appendChild(courseTitle);
-            courseInfo.appendChild(courseInstructor);
-            courseInfo.appendChild(courseRating);
-            courseInfo.appendChild(coursePrice);
+            courseInfoContainer.appendChild(courseThumb);
+            courseInfoContainer.appendChild(courseTitle);
+            courseInfoContainer.appendChild(courseInstructor);
+            courseInfoContainer.appendChild(courseRating);
+            courseInfoContainer.appendChild(coursePrice);
 
-            // Append image and course info to course item
-            courseItem.appendChild(courseInfo);
+            courseItem.appendChild(courseInfoContainer);
 
-            // Append course item to videos container
             videosContainer.appendChild(courseItem);
         });
     }
 
-    // Pegar todos os cursos com o botão de verTudo
-    document.querySelector(".verTudo").addEventListener("click", () => {
-        fetchCourses();
-    });
+    function displayCourses2(courseList) {
+        const videosContainer2 = document.querySelector("#videos-container2");
 
-    // Fetch-ar os cursos
+        videosContainer2.innerHTML = "";
+
+        courseList.map((course) => {
+            const courseItem = document.createElement("div");
+            courseItem.classList.add("course-item");
+
+            const courseInfoContainer = document.createElement("div");
+            courseInfoContainer.classList.add("course-info");
+
+            const courseThumb = document.createElement("img");
+            courseThumb.src = course.thumb;
+
+            const courseTitle = document.createElement("h3");
+            courseTitle.textContent = course.titulo;
+
+            const courseInstructor = document.createElement("p");
+            courseInstructor.textContent = course.professor;
+
+            const courseRating = document.createElement("p");
+            courseRating.innerHTML = renderStars(course.rating);
+
+            const coursePrice = document.createElement("p");
+            coursePrice.textContent = `R$ ${course.preco.toFixed(2)}`;
+
+            courseInfoContainer.appendChild(courseThumb);
+            courseInfoContainer.appendChild(courseTitle);
+            courseInfoContainer.appendChild(courseInstructor);
+            courseInfoContainer.appendChild(courseRating);
+            courseInfoContainer.appendChild(coursePrice);
+
+            courseItem.appendChild(courseInfoContainer);
+
+            videosContainer2.appendChild(courseItem);
+        });
+    }
+
+    function displayCourses3(courseList) {
+        const videosContainer3 = document.querySelector("#videos-container3");
+
+        videosContainer3.innerHTML = "";
+
+        courseList.map((course) => {
+            const courseItem = document.createElement("div");
+            courseItem.classList.add("course-item");
+
+            const courseInfoContainer = document.createElement("div");
+            courseInfoContainer.classList.add("course-info");
+
+            const courseThumb = document.createElement("img");
+            courseThumb.src = course.thumb;
+
+            const courseTitle = document.createElement("h3");
+            courseTitle.textContent = course.titulo;
+
+            const courseInstructor = document.createElement("p");
+            courseInstructor.textContent = course.professor;
+
+            const courseRating = document.createElement("p");
+            courseRating.innerHTML = renderStars(course.rating);
+
+            const coursePrice = document.createElement("p");
+            coursePrice.textContent = `R$ ${course.preco.toFixed(2)}`;
+
+            courseInfoContainer.appendChild(courseThumb);
+            courseInfoContainer.appendChild(courseTitle);
+            courseInfoContainer.appendChild(courseInstructor);
+            courseInfoContainer.appendChild(courseRating);
+            courseInfoContainer.appendChild(coursePrice);
+
+            courseItem.appendChild(courseInfoContainer);
+
+            videosContainer3.appendChild(courseItem);
+        });
+    }
+
+    function displayCourses4(courseList) {
+        const videosContainer4 = document.querySelector("#videos-container4");
+
+        videosContainer4.innerHTML = "";
+
+        courseList.map((course) => {
+            const courseItem = document.createElement("div");
+            courseItem.classList.add("course-item");
+
+            const courseInfoContainer = document.createElement("div");
+            courseInfoContainer.classList.add("course-info");
+
+            const courseThumb = document.createElement("img");
+            courseThumb.src = course.thumb;
+
+            const courseTitle = document.createElement("h3");
+            courseTitle.textContent = course.titulo;
+
+            const courseInstructor = document.createElement("p");
+            courseInstructor.textContent = course.professor;
+
+            const courseRating = document.createElement("p");
+            courseRating.innerHTML = renderStars(course.rating);
+
+            const coursePrice = document.createElement("p");
+            coursePrice.textContent = `R$ ${course.preco.toFixed(2)}`;
+
+            courseInfoContainer.appendChild(courseThumb);
+            courseInfoContainer.appendChild(courseTitle);
+            courseInfoContainer.appendChild(courseInstructor);
+            courseInfoContainer.appendChild(courseRating);
+            courseInfoContainer.appendChild(coursePrice);
+
+            courseItem.appendChild(courseInfoContainer);
+
+            videosContainer4.appendChild(courseItem);
+        });
+    }
+
     fetchCourses();
+
+    // Função para adicionar eventos de clique para as setinhas
+    function addScrollEvent(selector, direction) {
+        const buttons = document.querySelectorAll(selector);
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const containerId = button.getAttribute("data-container");
+                const videosContainer = document.getElementById(containerId);
+                const scrollAmount = direction === "right" ? 300 : -300;
+                videosContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth",
+                });
+            });
+        });
+    }
+
+    addScrollEvent(".scroll-button.right", "right");
+    addScrollEvent(".scroll-button.left", "left");
 });
