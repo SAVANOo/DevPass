@@ -6,7 +6,7 @@ const accessToken = localStorage.getItem('token');
 if (accessToken) {
 
     /* Requisição para receber coleção de cursos*/
-    fetch(`${baseUrl}/cursos/cursos`, {
+    fetch(`${baseUrl}/cursos/`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

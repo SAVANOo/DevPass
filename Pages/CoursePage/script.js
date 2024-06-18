@@ -8,7 +8,7 @@ if (accessToken) {
     const idParameter = urlParams.get('id');
 
     /* Requisição para receber coleção de cursos*/
-    fetch(`${baseUrl}/cursos/cursos`, {
+    fetch(`${baseUrl}/cursos/`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
